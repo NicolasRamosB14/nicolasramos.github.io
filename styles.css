@@ -85,21 +85,12 @@ header {
     background-color: var(--color-back-header);
     max-width: 100%;
     margin: 0 auto;
-    padding: 10px 30px;
+    padding: 20px 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
     border-bottom: 1px solid rgba(255, 255, 255, 0.178);
-}
-
-header h2 {
-    color: var(--color-text-header);
-    font-family: var(--font-family-orbitron);
-    font-size: 1.5rem;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
 }
 
 header nav {
@@ -112,7 +103,7 @@ header nav a {
     font-family: var(--font-family-orbitron);
     margin-right: 20px;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
@@ -470,8 +461,8 @@ header nav a {
 }
 
 .icon-container img {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
 }
 
 /* Ajustes de texto */
