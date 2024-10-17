@@ -11,8 +11,8 @@ body {
 }
 
 :root {
-    --color-back-body: #111214;
-    --width-section: 95%;
+    --color-back-body: #141414;
+    --width-section: 90%;
 
     /* variable fonts */
     --font-family-orbitron: 'Orbitron', sans-serif;
@@ -23,56 +23,57 @@ body {
     --color-text-header: #ffffff;
 
     /* varaibles hero */
-    --color-back-hero: #111214;
+    --color-back-hero: #141414;
     --color-h1-hero: #D40000;
     --color-text-hero: #ffffff;
-    --color-btn-hero: #660708;
-    --color-btn-hero-text: #ffffff;
+    --color-btn-hero: #F2B441;
+    --color-btn-hero-text: #000000;
 
     /* varaibles experience */
-    --color-back-exp: #111214;
-    --color-h2-card-exp: #660708;
-    --color-h3-card-exp: #3E1113;
-    --color-text-card-exp: #000000;
-    --color-date-card-exp: #000000;
-    --color-back-card-exp: #D3D3D3;
+    --color-back-exp: #141414;
+    --color-h2-card-exp: #D40000;
+    --color-h3-card-exp: #F2B441;
+    --color-text-card-exp: #ffffff;
+    --color-date-card-exp: #ffffff;
+    --color-back-card-exp: #141414;
 
     /* varaibles skill */
-    --color-back-skill: #111214;
-    --color-icon-skill: #D3D3D3;
+    --color-back-skill: #141414;
+    --color-icon-skill: #141414;
     --color-h3-skill: #ffffff;
 
     /* variables projects */
-    --color-back-proj: #111214;
+    --color-back-proj: #141414;
     --color-h2-proj: #D40000;
-    --color-back-card-proj: #D3D3D3;
-    --color-tags-proj: #0B090A;
-    --color-tags-text-proj: #ffffff;
-    --color-h3-card-proj: #660708;
-    --color-text-card-proj: #0B090A;
-    --color-btn-proj: #111214;
-    --color-btn-proj-text: #F5F3F4;
-    --color-btn-all-proj: #660708;
-    --color-btn-all-proj-text: #ffffff;
+    --color-back-card-proj: #0B090A;
+    --color-tags-proj: #F2B441;
+    --color-tags-text-proj: #000000;
+    --color-h3-card-proj: #D40000;
+    --color-text-card-proj: #ffffff;
+    --color-btn-proj: #F2B441;
+    --color-btn-proj-text: #000000;
+    --color-btn-all-proj: #F2B441;
+    --color-btn-all-proj-text: #000000;
 
     /* variables certificates */
-    --color-back-cert: #111214;
+    --color-back-cert: #141414;
     --color-h2-cert: #D40000;
-    --color-h2-card-cert: #660708;
-    --color-h3-card-cert: #3E1113;
-    --color-text-card-cert: #0B090A;
-    --color-date-card-cert: #0B090A;
-    --color-back-card-cert: #D3D3D3;
-    --color-btn-all-cert: #660708;
-    --color-btn-all-cert-text: #ffffff;
+    --color-h2-card-cert: #F2B441;
+    --color-h3-card-cert: #ffffff;
+    --color-date-card-cert: #ffffff;
+    --color-back-card-cert: #141414;
+    --color-btn-all-cert: #F2B441;
+    --color-btn-all-cert-text: #000000;
 
     /* variables badge */
-    --color-back-badge: #111214;
+    --color-back-badge: #141414;
     --color-h2-badge: #D40000;
 
     /* varaibles footer */
     --color-back-footer: #0B090A;
-    
+    --color-h2-footer: #D40000;
+    --color-text-footer: #ffffff;
+    --color-h3-footer: #F2B441;
 }
 
 
@@ -81,8 +82,6 @@ body {
 =========================================*/
 
 header {
-    
-
     background-color: var(--color-back-header);
     max-width: 100%;
     margin: 0 auto;
@@ -97,7 +96,6 @@ header {
 header h2 {
     color: var(--color-text-header);
     font-family: var(--font-family-orbitron);
-    margin-left: 40px;
     font-size: 1.5rem;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -163,11 +161,13 @@ header nav a {
 =========================================*/
 /* Inicio Nombre - Descripcion - CV - Foto */
 .hero {
+    display: flex;
+    justify-content:center;
     background-color: var(--color-back-hero);
     max-width: var(--width-section);
     margin: 0 auto;
     display: flex;
-    padding: 60px 40px;  
+    padding: 40px;  
     align-items: center;
     border-bottom: 1px solid rgb(255, 255, 255);
 }
@@ -175,6 +175,7 @@ header nav a {
 .hero-text h1 {
     color: var(--color-h1-hero);
     font-family: var(--font-family-orbitron);
+    text-align: center;
     font-size: 3.5rem;
     margin-bottom: 10px;
     font-optical-sizing: auto;
@@ -183,34 +184,30 @@ header nav a {
 }
 
 .hero-text {
-    max-width: 60%;
-    padding-left: 10px;
+    text-align: center;
+    max-width: 80%;
 }
 
 .hero-text p {
     color: var(--color-text-hero);
     font-family: var(--font-family-space);
-    text-align: justify;
+    text-align: center;
     margin-bottom: 20px;
     font-size: 1.2rem;
     font-weight: 400;
     font-style: normal;
 }
 
+.btn-primary img{
+    margin-right: 8px; /* Espacio entre la imagen y el texto */
+    width: 1em; /* Tamaño de la imagen */
+    height: 1em; /* Tamaño de la imagen */
+}
+
 .hero-text .btn-primary {
-    background-color: var(--color-btn-hero);
-    color: var(--color-btn-hero-text);
-    font-family: var(--font-family-orbitron);
-    padding: 10px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    margin-right: 10px;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.hero-text .btn-secondary {
+    display: inline-flex; /* Usa Flexbox */
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+    justify-content: center; /* Centra horizontalmente */
     background-color: var(--color-btn-hero);
     color: var(--color-btn-hero-text);
     font-family: var(--font-family-orbitron);
@@ -218,19 +215,8 @@ header nav a {
     border-radius: 10px;
     text-decoration: none;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
-}
-
-/* Ajustes de la imagen */
-.hero-image {
-    max-width: 40%;
-    margin: 0 auto;
-}
-
-.hero-image img {
-    width: 100%;
-    border-radius: 50%;
 }
 
 /* Media Query para pantallas medianas */
@@ -242,13 +228,6 @@ header nav a {
 
     .hero-text {
         max-width: 100%;
-    }
-
-    .hero-image {
-        order: -1; /* Coloca la imagen primero */
-        margin-bottom: 20px; /* Añade un poco de espacio debajo de la imagen */
-        max-width: 60%; /* Ajustamos el tamaño de la imagen */
-        margin-top: 20px;
     }
 
     .hero-text h1 {
@@ -274,12 +253,6 @@ header nav a {
         font-size: 0.9rem;
     }
 
-    .hero-image {
-        order: -1; /* Coloca la imagen primero */
-        margin-bottom: 20px; /* Añade un poco de espacio debajo de la imagen */
-        max-width: 80%; /* La imagen es más pequeña en pantallas pequeñas */
-    }
-
     .hero-text .btn-primary, .hero-text .btn-secondary {
         padding: 8px 16px; /* Reducimos el tamaño de los botones */
         font-size: 0.9rem;
@@ -301,10 +274,6 @@ header nav a {
         font-size: 0.8rem;
     }
 
-    .hero-image {
-        max-width: 90%;
-    }
-
     .hero-text .btn-primary, .hero-text .btn-secondary {
         padding: 6px 12px;
         font-size: 0.8rem;
@@ -319,42 +288,35 @@ header nav a {
     background-color: var(--color-back-exp);
     max-width: var(--width-section);
     margin: 0 auto;
-    padding: 30px 40px;
+    padding: 50px 40px;
 }
 
 .experience-container {
     display: flex;
     justify-content:space-evenly;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 /* Card Styles */
 .experience-card {
     background-color: var(--color-back-card-exp);
     border-radius: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    transition: all 0.3s ease;
 }
 
 .experience-card-header {
-    display: flex;
-    border-bottom: 1px solid rgb(0, 0, 0);
-}
-
-.experience-card-header img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    text-align: center;
 }
 
 .experience-card-header h2 {
     color: var(--color-h2-card-exp);
     font-family: var(--font-family-orbitron);
     margin-bottom: 10px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-optical-sizing: auto;
-    font-weight: 800;
+    font-weight: 900;
     font-style: normal;
 }
 
@@ -384,17 +346,17 @@ header nav a {
 .timeline-item h3 {
     color: var(--color-h3-card-exp);
     font-family: var(--font-family-orbitron);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-optical-sizing: auto;
-    font-weight: 700;
+    font-weight: 800;
     font-style: normal;
 }
 
 .timeline-item p.date {
     color: var(--color-date-card-exp);
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-family: "Space Mono", serif;
-    font-weight: 400;
+    font-weight: 700;
     font-style: italic;
 }
 
@@ -459,11 +421,6 @@ header nav a {
         font-size: 1.2rem;
     }
 
-    .experience-card-header img {
-        width: 30px;
-        height: 30px;
-    }
-
     .timeline-item h3 {
         font-size: 1rem;
     }
@@ -486,7 +443,7 @@ header nav a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Diseño responsive */
     gap: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 /* Estilos individuales de habilidades */
@@ -513,8 +470,8 @@ header nav a {
 }
 
 .icon-container img {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
 }
 
 /* Ajustes de texto */
@@ -525,6 +482,7 @@ header nav a {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+    align-content: center;
 }
 
 /* Media Queries para pantallas más pequeñas */
@@ -542,8 +500,8 @@ header nav a {
     }
 
     .icon-container img {
-        width: 40px; /* Redimensiona los íconos en pantallas pequeñas */
-        height: 40px;
+        width: 50px; /* Redimensiona los íconos en pantallas pequeñas */
+        height: 50px;
     }
 
     .skill-item h3 {
@@ -586,27 +544,34 @@ header nav a {
 .projects-section h2 {
     color: var(--color-h2-proj);
     font-family: var(--font-family-orbitron);
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
+    margin-bottom: 20px;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Ajusta el valor para el espacio entre las tarjetas */
+    flex-direction: column;
+    align-items: center;
 }
 
 .project-card {
     background-color: var(--color-back-card-proj);
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
     border-radius: 15px;
     padding: 20px;
-    
 }
 
-.image-container img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 15px;
+.project-card-wrapper {
+    background: linear-gradient(-45deg, #2d00f7 0%, #f20089 100%); /* Fondo con gradiente */
+    padding: 5px; /* Ancho del borde */
+    border-radius: 15px; /* Radio de borde */
 }
 
 .project-details {
@@ -626,7 +591,7 @@ header nav a {
     border-radius: 15px;
     font-size: 1rem;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -659,18 +624,18 @@ header nav a {
     border-radius: 25px;
     text-decoration: none;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
 }
 
 .view-details-btn:hover {
-    background-color: #5C162E;
+    background-color: #f2b441c5;
 }
 
 .project-view-all-btn{
-    margin-top: 20px;
     display: flex;
     justify-content: center;
+    padding: 20px 0px;
 }
 
 .view-all-btn {
@@ -683,12 +648,177 @@ header nav a {
     cursor: pointer;
     font-size: 1.1rem;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
 }
 
 .view-all-btn:hover {
-    background-color: #5C162E;
+    background-color: #f2b441c5;
+}
+
+/* From Uiverse.io by Galahhad */ 
+.ui-btn {
+    --btn-default-bg: #141414;
+    --btn-padding: 10px 10px;
+    --btn-hover-bg: #141414;
+    --btn-transition: .3s;
+    --btn-letter-spacing: .1rem;
+    --btn-animation-duration: 1.2s;
+    --btn-shadow-color: rgba(0, 0, 0, 0.137);
+    --hover-btn-color: #FAC921;
+    --default-btn-color: #ffffff0e;
+    --font-size: 15px;
+    /* 👆 this field should not be empty */
+    --font-weight: 600;
+    --font-family: Menlo,Roboto Mono,monospace;
+    /* 👆 this field should not be empty */
+}
+
+  /* button settings 👆 */
+
+.button-secret {
+    display: flex;
+    justify-content: center;
+}
+
+.ui-btn {
+    align-items: center;
+    align-content: center;
+    box-sizing: border-box;
+    padding: var(--btn-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--default-btn-color);
+    font: var(--font-weight) var(--font-size) var(--font-family);
+    background: var(--btn-default-bg);
+    border: none;
+    cursor: pointer;
+    transition: var(--btn-transition);
+    overflow: hidden;
+    box-shadow: var(--btn-shadow);
+}
+
+.ui-btn span {
+    letter-spacing: var(--btn-letter-spacing);
+    transition: var(--btn-transition);
+    box-sizing: border-box;
+    position: relative;
+    background: inherit;
+}
+
+.ui-btn span::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    background: inherit;
+}
+
+.ui-btn:hover, .ui-btn:focus {
+    background: var(--btn-hover-bg);
+}
+
+.ui-btn:hover span, .ui-btn:focus span {
+    color: var(--hover-btn-color);
+}
+
+.ui-btn:hover span::before, .ui-btn:focus span::before {
+    animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+    0% {
+        content: "#";
+    }
+
+    5% {
+        content: ".";
+    }
+    
+    10% {
+        content: "^{";
+    }
+    
+    15% {
+        content: "-!";
+    }
+    
+    20% {
+        content: "#$_";
+    }
+    
+    25% {
+        content: "№:0";
+    }
+    
+    30% {
+        content: "#{+.";
+    }
+    
+    35% {
+        content: "@}-?";
+    }
+    
+    40% {
+        content: "?{4@%";
+    }
+    
+    45% {
+        content: "=.,^!";
+    }
+    
+    50% {
+        content: "?2@%";
+    }
+    
+    55% {
+        content: "\;1}]";
+    }
+    
+    60% {
+        content: "?{%:%";
+        right: 0;
+    }
+    
+    65% {
+        content: "|{f[4";
+        right: 0;
+    }
+    
+    70% {
+        content: "{4%0%";
+        right: 0;
+    }
+    
+    75% {
+        content: "'1_0<";
+        right: 0;
+    }
+    
+    80% {
+        content: "{0%";
+        right: 0;
+    }
+    
+    85% {
+        content: "]>'";
+        right: 0;
+    }
+    
+    90% {
+        content: "4";
+        right: 0;
+    }
+    
+        95% {
+        content: "2";
+        right: 0;
+        }
+    
+    100% {
+        content: "";
+        right: 0;
+    }
 }
 
 /* Responsive Design */
@@ -699,11 +829,6 @@ header nav a {
         flex-direction: column;
         align-items: center;
         text-align: center;
-    }
-
-    .image-container img {
-        max-width: 100%;
-        margin-bottom: 20px;
     }
 
     .view-all-btn {
@@ -800,8 +925,7 @@ header nav a {
 .certificate-section h2{
     color: var(--color-h2-cert);
     font-family: var(--font-family-orbitron);
-    font-size: 2rem;
-    margin-bottom: 15px;
+    font-size: 2.3rem;
     text-align: center;
     font-optical-sizing: auto;
     font-weight: 800;
@@ -814,13 +938,13 @@ header nav a {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-content: center;
+    padding: 40px 0px;
 }
 
 .certificate-card {
     background-color: var(--color-back-card-cert);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -829,22 +953,16 @@ header nav a {
     transform: translateY(-10px);
 }
 
-.certificate-card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 15px;
-}
-
 .certificate-card-header {
-    display: flex;
-    border-bottom: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    text-align: center;
 }
 
 .certificate-card-header h2{
     color: var(--color-h2-card-cert);
     font-family: var(--font-family-orbitron);
     margin-bottom: 10px;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
@@ -865,7 +983,7 @@ header nav a {
 .certificate-timeline-item h3{
     color: var(--color-h3-card-cert);
     font-family: var(--font-family-orbitron);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -874,23 +992,12 @@ header nav a {
 .certificate-date {
     color: var(--color-date-card-cert);
     font-family: var(--font-family-space);
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 400;
     font-style: italic;
 }
 
-.certificate-description{
-    color: var(--color-text-card-cert);
-    font-family: var(--font-family-space);
-    font-size: 0.9rem;
-    margin-top: 5px;
-    margin-left: 15px;
-    font-weight: 400;
-    font-style: normal;
-}
-
 .cert-view-all-btn{
-    margin-top: 20px;
     display: flex;
     justify-content: center;
 }
@@ -906,12 +1013,12 @@ header nav a {
     cursor: pointer;
     font-size: 1.1rem;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
 }
 
 .cer-view-all-btn:hover {
-    background-color: #8fc700;
+    background-color: #f2b441c5;
 }
 
 /* Media Queries para diferentes tamaños de pantalla */
@@ -951,84 +1058,138 @@ header nav a {
     background-color: var(--color-back-badge);
     margin: 0 auto;
     text-align: center;
-    padding: 20px;
+    padding: 0px 40px;
+    padding-bottom: 40px;
 }
 .badge h2 {
     color: var(--color-h2-badge);
     font-family: var(--font-family-orbitron);
-    font-size: 2rem;
-    margin-bottom: 15px;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
     text-align: center;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
 }
-.badge-container {
-    background-color: #f3f3f3;
-    display: flex; /* Usamos flexbox para alinearlos en fila */
-    justify-content: center; /* Centra todos los elementos */
-    flex-wrap: wrap; /* Para que los elementos se ajusten en líneas múltiples si es necesario */
-    gap: 20px; /* Añade un espacio de 20px entre cada badge */
-}
-
 /*=========================================
              Footer Styles
 =========================================*/
 /*FOOTER*/
+/* Estilos generales para dispositivos grandes */
 footer {
     background-color: var(--color-back-footer);
-    max-width: 100%;
-    margin: 0 auto;
-    color: #fff;
-    padding: 40px 0;
+    font-family: var(--font-family-space);
+    color: white;
+    padding: 20px;
     text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 20px 40px;
 }
 
-.footer-container {
+.contact-footer{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.footer-container {   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
 .footer-container h2 {
-    font-size: 1.5rem;
+    color: var(--color-h2-footer);
+    font-family: var(--font-family-orbitron);
+    font-size: 2rem;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
     margin-bottom: 10px;
-    color: #fff;
 }
 
-.footer-description {
-    font-size: 1rem;
-    color: #aaa;
-    margin-bottom: 30px;
-}
-
-.footer-socials {
-    margin-bottom: 30px;
-}
-
-.footer-socials a {
-    margin: 0 10px;
-    color: #fff;
+.contact-footer h3{
+    color: var(--color-h3-footer);
+    font-family: var(--font-family-orbitron);
     font-size: 1.2rem;
-    text-decoration: none;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
-.footer-socials a:hover {
-    color: #5b8def;
+.footer-container p {
+    color: var(--color-text-footer);
+    font-family: var(--font-family-space);
+    font-size: 1.2rem;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
-.footer-bottom {
-    font-size: 0.9rem;
-    color: #777;
-    margin-top: 20px;
+.contact-info {
+    text-align: center; /* Centra el texto */
+    margin-bottom: 20px; /* Espacio entre el texto de contacto y los iconos de redes sociales */
 }
 
-.footer-bottom a {
-    color: #aaa;
-    text-decoration: none;
-    margin: 0 10px;
+.social-icons-container {
+    display: flex; /* Flexbox para alinear los iconos en una fila */
+    justify-content: center; /* Alinea los iconos en el centro */
+    gap: 20px; /* Espacio entre los iconos */
 }
 
-.footer-bottom a:hover {
-    color: #5b8def;
+.icon-container-footer img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.icon-container-footer img:hover {
+    transform: scale(1.1); /* Efecto al pasar el cursor sobre los iconos */
+}
+
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        text-align: center; /* Alinea todo al centro */
+    }
+
+    .footer-container h2 {
+        font-size: 2rem; /* Reduce el tamaño de fuente en pantallas pequeñas */
+    }
+    .footer-container p {
+        font-size: 1.2rem;
+    }
+
+    .icon-container-footer img {
+        width: 40px; /* Ajusta el tamaño de los íconos */
+        height: 40px;
+    }
+}
+
+/* Media queries para pantallas muy pequeñas (ej. móviles) */
+@media (max-width: 480px) {
+    footer {
+        padding: 15px; /* Reduce el padding */
+        font-size: 0.9rem; /* Ajusta el tamaño general del texto */
+    }
+
+    .footer-container p, .footer-container h2 {
+        font-size: 0.9rem; /* Reduce más el tamaño de la fuente */
+    }
+
+    .icon-container-footer img {
+        width: 35px; /* Íconos más pequeños */
+        height: 35px;
+    }
 }
