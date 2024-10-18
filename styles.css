@@ -8,18 +8,19 @@ body {
     background-color: var(--color-back-body);
     color: #000000;
     line-height: 1.6;
+
 }
 
 :root {
     --color-back-body: #141414;
-    --width-section: 90%;
+    --width-section: 100%;
 
     /* variable fonts */
     --font-family-orbitron: 'Orbitron', sans-serif;
     --font-family-space: 'Space Mono', serif;
 
     /* variables header */
-    --color-back-header:#0B090A;
+    --color-back-header: linear-gradient(90deg, hsla(354, 95%, 24%, 1) 0%, hsla(234, 70%, 24%, 1) 100%);
     --color-text-header: #ffffff;
 
     /* varaibles hero */
@@ -78,19 +79,19 @@ body {
 
 
 /*=========================================
-             Header Styles
+            Header Styles
 =========================================*/
 
 header {
-    background-color: var(--color-back-header);
+    background: var(--color-back-header);
     max-width: 100%;
     margin: 0 auto;
-    padding: 20px 30px;
+    padding: 15px 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.178);
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.459);
 }
 
 header nav {
@@ -103,9 +104,9 @@ header nav a {
     font-family: var(--font-family-orbitron);
     margin-right: 20px;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -148,19 +149,18 @@ header nav a {
 }
 
 /*=========================================
-             Hero Styles
+            Hero Styles
 =========================================*/
 /* Inicio Nombre - Descripcion - CV - Foto */
 .hero {
     display: flex;
     justify-content:center;
-    background-color: var(--color-back-hero);
+    background: var(--color-back-hero);
     max-width: var(--width-section);
     margin: 0 auto;
     display: flex;
     padding: 40px;  
     align-items: center;
-    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .hero-text h1 {
@@ -183,7 +183,7 @@ header nav a {
     color: var(--color-text-hero);
     font-family: var(--font-family-space);
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 1.2rem;
     font-weight: 400;
     font-style: normal;
@@ -279,7 +279,8 @@ header nav a {
     background-color: var(--color-back-exp);
     max-width: var(--width-section);
     margin: 0 auto;
-    padding: 50px 40px;
+    padding: 0px 40px;
+    padding-bottom: 30px;
 }
 
 .experience-container {
@@ -291,6 +292,7 @@ header nav a {
 
 /* Card Styles */
 .experience-card {
+    width: 50px;
     background-color: var(--color-back-card-exp);
     border-radius: 15px;
     padding: 20px;
@@ -418,7 +420,7 @@ header nav a {
 }
 
 /*=========================================
-             Skill Styles
+            Skill Styles
 =========================================*/
 /* Skill Section */
 .skills-section {
@@ -427,7 +429,6 @@ header nav a {
     text-align: center;
     padding: 0px 40px;
     margin: 0 auto;
-    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .skills-grid {
@@ -529,7 +530,6 @@ header nav a {
     background-color: var(--color-back-proj);
     margin: 0 auto;
     padding: 30px 40px;
-    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .projects-section h2 {
@@ -556,12 +556,12 @@ header nav a {
     display: flex;
     flex-wrap: wrap;
     border-radius: 15px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .project-card-wrapper {
-    background: linear-gradient(-45deg, #2d00f7 0%, #f20089 100%); /* Fondo con gradiente */
-    padding: 5px; /* Ancho del borde */
+    background: linear-gradient(90deg, hsla(318, 44%, 51%, 1) 0%, hsla(347, 94%, 48%, 1) 100%);/* Fondo con gradiente */
+    padding: 3px; /* Ancho del borde */
     border-radius: 15px; /* Radio de borde */
 }
 
@@ -633,11 +633,12 @@ header nav a {
     background-color: var(--color-btn-all-proj);
     color: var(--color-btn-all-proj-text);
     font-family: var(--font-family-orbitron);
+    text-decoration: none;
     padding: 10px 20px;
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -647,6 +648,238 @@ header nav a {
     background-color: #f2b441c5;
 }
 
+/* Responsive Design */
+
+/* Tablets and smaller devices */
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .view-all-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .project-details h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-details p {
+        font-size: 0.9rem;
+    }
+
+    .tag {
+        font-size: 0.7rem;
+    }
+}
+
+/* Mobile devices (phones, less than 480px) */
+@media (max-width: 480px) {
+    .projects-section {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .view-all-btn {
+        font-size: 0.8rem;
+        padding: 7px 12px;
+        margin-bottom: 15px;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+
+    .project-details h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-details p {
+        font-size: 0.8rem;
+    }
+
+    .tag {
+        font-size: 0.6rem;
+        padding: 3px 8px;
+    }
+
+    .view-details-btn {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Larger screens (1200px and above) */
+@media (min-width: 1200px) {
+    .project-card {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .project-details {
+        padding: 20px;
+    }
+
+    .project-details h3 {
+        font-size: 2rem;
+    }
+
+    .project-details p {
+        font-size: 1.1rem;
+    }
+}
+
+/*=========================================
+            Certificates Styles
+=========================================*/
+/* Certificates */
+.certificate-section {
+    max-width: var(--width-section);
+    background-color: var(--color-back-cert);
+    padding: 0px 40px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+}
+
+.certificate-section h2{
+    color: var(--color-h2-cert);
+    font-family: var(--font-family-orbitron);
+    font-size: 2.3rem;
+    text-align: center;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Certificado grid */
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 0px;
+}
+
+.certificate-card {
+    background-color: var(--color-back-card-cert);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+}
+
+.certificate-card-header {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    text-align: center;
+}
+
+.certificate-card-header h2{
+    color: var(--color-h2-card-cert);
+    font-family: var(--font-family-orbitron);
+    margin-bottom: 10px;
+    font-size: 1.7rem;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.certificate-card-body {
+    padding: 10px;
+    text-align: left;
+}
+
+.certificate-timeline-item {
+    margin-top: 5px;
+    display: flex;        /* Flexbox para alinear elementos en una fila */
+    align-items:center;  /* Alinea verticalmente los elementos al centro */
+    justify-content: space-between;
+}
+
+.certificate-timeline-item h3{
+    color: var(--color-h3-card-cert);
+    font-family: var(--font-family-orbitron);
+    font-size: 1.2rem;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.certificate-date {
+    color: var(--color-date-card-cert);
+    font-family: var(--font-family-space);
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.cert-view-all-btn{
+    display: flex;
+    justify-content: center;
+}
+
+/* Botón de "View All" */
+.cer-view-all-btn {
+    background-color: var(--color-btn-all-cert);
+    color: var(--color-btn-all-cert-text);
+    font-family: var(--font-family-orbitron);
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.cer-view-all-btn:hover {
+    background-color: #f2b441c5;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    .certificate-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+}
+
+/* Smartphones y pantallas pequeñas */
+@media (max-width: 768px) {
+    .certificate-section {
+        max-width: 100%;
+    }
+    .certificate-grid {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+
+    .certificate-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cer-view-all-btn {
+        margin-top: 15px; /* Añade espacio entre el botón y el texto en pantallas pequeñas */
+    }
+}
+
+/*=========================================
+            Button Secret Styles
+=========================================*/
 /* From Uiverse.io by Galahhad */ 
 .ui-btn {
     --btn-default-bg: #141414;
@@ -812,258 +1045,107 @@ header nav a {
     }
 }
 
-/* Responsive Design */
-
-/* Tablets and smaller devices */
-@media (max-width: 768px) {
-    .project-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .view-all-btn {
-        font-size: 0.9rem;
-        padding: 8px 15px;
-    }
-
-    .project-details h3 {
-        font-size: 1.5rem;
-    }
-
-    .project-details p {
-        font-size: 0.9rem;
-    }
-
-    .tag {
-        font-size: 0.7rem;
-    }
-}
-
-/* Mobile devices (phones, less than 480px) */
-@media (max-width: 480px) {
-    .projects-section {
-        max-width: 100%;
-        padding: 20px;
-    }
-
-    .header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .view-all-btn {
-        font-size: 0.8rem;
-        padding: 7px 12px;
-        margin-bottom: 15px;
-    }
-
-    .project-card {
-        padding: 15px;
-    }
-
-    .project-details h3 {
-        font-size: 1.3rem;
-    }
-
-    .project-details p {
-        font-size: 0.8rem;
-    }
-
-    .tag {
-        font-size: 0.6rem;
-        padding: 3px 8px;
-    }
-
-    .view-details-btn {
-        font-size: 0.8rem;
-        padding: 8px 15px;
-    }
-}
-
-/* Larger screens (1200px and above) */
-@media (min-width: 1200px) {
-    .project-card {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .project-details {
-        padding: 20px;
-    }
-
-    .project-details h3 {
-        font-size: 2rem;
-    }
-
-    .project-details p {
-        font-size: 1.1rem;
-    }
-}
-
 /*=========================================
-             Certificates Styles
-=========================================*/
-
-/* Certificates */
-.certificate-section {
-    max-width: var(--width-section);
-    background-color: var(--color-back-cert);
-    padding: 30px 40px;
-    margin: 0 auto;
-}
-
-.certificate-section h2{
-    color: var(--color-h2-cert);
-    font-family: var(--font-family-orbitron);
-    font-size: 2.3rem;
-    text-align: center;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-}
-
-/* Certificado grid */
-.certificate-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-content: center;
-    padding: 40px 0px;
-}
-
-.certificate-card {
-    background-color: var(--color-back-card-cert);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.certificate-card:hover {
-    transform: translateY(-10px);
-}
-
-.certificate-card-header {
-    border-bottom: 1px solid rgb(255, 255, 255);
-    text-align: center;
-}
-
-.certificate-card-header h2{
-    color: var(--color-h2-card-cert);
-    font-family: var(--font-family-orbitron);
-    margin-bottom: 10px;
-    font-size: 1.7rem;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-}
-
-.certificate-card-body {
-    padding: 10px;
-    text-align: left;
-}
-
-.certificate-timeline-item {
-    margin-top: 5px;
-    display: flex;        /* Flexbox para alinear elementos en una fila */
-    align-items:center;  /* Alinea verticalmente los elementos al centro */
-    justify-content: space-between;
-}
-
-.certificate-timeline-item h3{
-    color: var(--color-h3-card-cert);
-    font-family: var(--font-family-orbitron);
-    font-size: 1.2rem;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.certificate-date {
-    color: var(--color-date-card-cert);
-    font-family: var(--font-family-space);
-    font-size: 1rem;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.cert-view-all-btn{
-    display: flex;
-    justify-content: center;
-}
-
-/* Botón de "View All" */
-.cer-view-all-btn {
-    background-color: var(--color-btn-all-cert);
-    color: var(--color-btn-all-cert-text);
-    font-family: var(--font-family-orbitron);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.cer-view-all-btn:hover {
-    background-color: #f2b441c5;
-}
-
-/* Media Queries para diferentes tamaños de pantalla */
-
-/* Tablets y pantallas medianas */
-@media (max-width: 1024px) {
-    .certificate-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
-    }
-}
-
-/* Smartphones y pantallas pequeñas */
-@media (max-width: 768px) {
-    .certificate-section {
-        max-width: 100%;
-    }
-    .certificate-grid {
-        grid-template-columns: 1fr; /* 1 columna en móviles */
-    }
-
-    .certificate-header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .cer-view-all-btn {
-        margin-top: 15px; /* Añade espacio entre el botón y el texto en pantallas pequeñas */
-    }
-}
-
-/*=========================================
-             Bagdes Styles
+            Bagdes Styles
 =========================================*/
 /* Estilo general para la sección */
 .badge {
-    max-width: var(--width-section);
+    max-width:var(--width-section); /* Ancho relativo a la pantalla del dispositivo */
     background-color: var(--color-back-badge);
     margin: 0 auto;
     text-align: center;
-    padding: 0px 40px;
+    padding: 0 5vw; /* Ajusta el relleno a un valor relativo */
     padding-bottom: 40px;
 }
+
 .badge h2 {
     color: var(--color-h2-badge);
     font-family: var(--font-family-orbitron);
     font-size: 2.3rem;
     margin-bottom: 20px;
     text-align: center;
-    font-optical-sizing: auto;
     font-weight: 800;
-    font-style: normal;
 }
+
+/* Grid layout for the badges */
+.badge-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible grid */
+    gap: 20px;
+    justify-items: center;
+    padding: 20px 0;
+}
+
+/* Badge items */
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.badge-item a{
+    text-decoration: none;
+}
+
+
+.badge-item:hover {
+    transform: translateY(-10px);
+}
+
+.badge-item img {
+    width: 125px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.badge-item h3 {
+    font-family: var(--font-family-orbitron);
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Media Queries for responsiveness */
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .badge h2 {
+        font-size: 1.8rem; /* Reduce tamaño del texto */
+    }
+
+    .badge-item img {
+        width: 120px; /* Reduce el tamaño de las imágenes */
+    }
+
+    .badge-item h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Para pantallas muy pequeñas (dispositivos móviles con anchura menor a 480px) */
+@media (max-width: 480px) {
+    .badge h2 {
+        font-size: 1.5rem; /* Aún más pequeño para pantallas muy pequeñas */
+    }
+
+    .badge-item img {
+        width: 100px;
+    }
+
+    .badge-item h3 {
+        font-size: 0.9rem;
+    }
+
+    /* Ajuste adicional del grid para que ocupe más espacio vertical */
+    .badge-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Menor ancho mínimo */
+        gap: 15px;
+    }
+}
+
 /*=========================================
-             Footer Styles
+            Footer Styles
 =========================================*/
 /*FOOTER*/
 /* Estilos generales para dispositivos grandes */
@@ -1175,8 +1257,12 @@ footer {
         font-size: 0.9rem; /* Ajusta el tamaño general del texto */
     }
 
-    .footer-container p, .footer-container h2 {
+    .footer-container p {
         font-size: 0.9rem; /* Reduce más el tamaño de la fuente */
+    }
+
+    .footer-container h2 {
+        font-size: 2rem;
     }
 
     .icon-container-footer img {
