@@ -556,7 +556,7 @@ header nav a {
     display: flex;
     flex-wrap: wrap;
     border-radius: 15px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .project-card-wrapper {
@@ -656,6 +656,7 @@ header nav a {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 15px;
     }
 
     .view-all-btn {
@@ -921,6 +922,7 @@ header nav a {
     transition: var(--btn-transition);
     overflow: hidden;
     box-shadow: var(--btn-shadow);
+    text-decoration: none;
 }
 
 .ui-btn span {
