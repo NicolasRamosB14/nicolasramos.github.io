@@ -275,20 +275,8 @@
 
         </section>
 
-        <!-- Button Secret Section -->
-        <section>
-            <div class="button-secret">
-                <a href="" class="ui-btn">
-                    <span>      
-                        Qcv.bOWbm
-                    </span>
-                </a>
-            </div>
-        </section>
-
         <!-- Badge Section -->
         <section class="badge">
-            <h2>BADGES</h2>
             <div class="badge-container">
                 <div class="badge-item">
                     <a href="https://www.credly.com/badges/268653b6-aca7-4a4e-8808-5d0850be0a13/public_url" >
@@ -328,7 +316,47 @@
                 </div>
             </div>
         </section>
-        
+
+        <!-- Button Secret Section -->
+        <section>
+            <div class="button-secret">
+                <button class="ui-btn" onclick="toggleSection()"> <!-- Botón para mostrar/ocultar -->
+                    <span>Qcv.bOWbm</span>
+                </button>
+            </div>
+            
+            <!-- Sección oculta con las tarjetas -->
+            <div id="hidden-section" class="hidden-section">
+                <h2>
+                    <img src="Images\huevo-de-pascua.png" alt="EASTER EGG"/>
+                    EASTER EGG
+                    <img src="Images\huevo-de-pascua.png" alt="EASTER EGG"/>
+                </h2>
+                <div class="card-hidden-container">
+                    <!-- Primera tarjeta -->
+                    <div class="card-hidden">
+                        <h3>Película Favorita</h3>
+                        <img src="Images\Blade-Runner-1982.jpg" alt="Blade-Runner-1982">
+                        <p>BLADE RUNNER (1982)</p>
+                    </div>
+                            
+                    <!-- Segunda tarjeta -->
+                    <div class="card-hidden">
+                        <h3>Videojuego Favorito</h3>
+                        <img src="Images\Cyberpunk.jpg" alt="Cyberpunk">
+                        <p>CYBERPUNK 2077</p>
+                    </div>
+                            
+                    <!-- Tercera tarjeta -->
+                    <div class="card-hidden">
+                        <h3>Libro Favorito</h3>
+                        <img src="Images\Satanas.png" alt="Imagen 3">
+                        <p>SATANÁS - MARIO MENDOZA</p>
+                    </div>
+                </div>
+            </div>
+            <script src="script.js"></script>
+        </section>
 
         <!-- Footer -->
         <footer>

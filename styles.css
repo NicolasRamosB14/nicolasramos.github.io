@@ -68,7 +68,14 @@ body {
 
     /* variables badge */
     --color-back-badge: #141414;
-    --color-h2-badge: #D40000;
+
+    /* variables button secret */
+    --color-back-secret: #141414;
+    --color-h2-secret: #D40000;
+    --color-text-secret: #ffffff;
+    --color-h3-secret: #F2B441;
+    --color-card-secret:#141414;
+    
 
     /* varaibles footer */
     --color-back-footer: #0B090A;
@@ -879,6 +886,95 @@ header nav a {
 }
 
 /*=========================================
+            Bagdes Styles
+=========================================*/
+/* Estilo general para la sección */
+.badge {
+    max-width:var(--width-section); /* Ancho relativo a la pantalla del dispositivo */
+    background-color: var(--color-back-badge);
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 5vw; /* Ajusta el relleno a un valor relativo */
+    padding-bottom: 20px;
+}
+/* Grid layout for the badges */
+.badge-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible grid */
+    gap: 20px;
+    justify-items: center;
+    padding: 20px 0;
+}
+
+/* Badge items */
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.badge-item a{
+    text-decoration: none;
+}
+
+
+.badge-item:hover {
+    transform: translateY(-10px);
+}
+
+.badge-item img {
+    width: 125px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.badge-item h3 {
+    font-family: var(--font-family-orbitron);
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Media Queries for responsiveness */
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .badge h2 {
+        font-size: 1.8rem; /* Reduce tamaño del texto */
+    }
+
+    .badge-item img {
+        width: 120px; /* Reduce el tamaño de las imágenes */
+    }
+
+    .badge-item h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Para pantallas muy pequeñas (dispositivos móviles con anchura menor a 480px) */
+@media (max-width: 480px) {
+    .badge h2 {
+        font-size: 1.5rem; /* Aún más pequeño para pantallas muy pequeñas */
+    }
+
+    .badge-item img {
+        width: 100px;
+    }
+
+    .badge-item h3 {
+        font-size: 0.9rem;
+    }
+
+    /* Ajuste adicional del grid para que ocupe más espacio vertical */
+    .badge-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Menor ancho mínimo */
+        gap: 15px;
+    }
+}
+
+/*=========================================
             Button Secret Styles
 =========================================*/
 /* From Uiverse.io by Galahhad */ 
@@ -1047,104 +1143,109 @@ header nav a {
     }
 }
 
-/*=========================================
-            Bagdes Styles
-=========================================*/
-/* Estilo general para la sección */
-.badge {
-    max-width:var(--width-section); /* Ancho relativo a la pantalla del dispositivo */
-    background-color: var(--color-back-badge);
-    margin: 0 auto;
-    text-align: center;
-    padding: 0 5vw; /* Ajusta el relleno a un valor relativo */
-    padding-bottom: 40px;
+/* Ocultar la sección inicialmente con transición */
+.hidden-section {
+    max-height: 0; /* Altura inicial 0 para ocultar */
+    overflow: hidden;
+    opacity: 0; /* Transparencia inicial */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Transición suave */
+    margin-top: 20px;
 }
 
-.badge h2 {
-    color: var(--color-h2-badge);
+.hidden-section h2 {
+    color: var(--color-h2-secret);
     font-family: var(--font-family-orbitron);
-    font-size: 2.3rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
     text-align: center;
     font-weight: 800;
 }
 
-/* Grid layout for the badges */
-.badge-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible grid */
-    gap: 20px;
-    justify-items: center;
-    padding: 20px 0;
-}
-
-/* Badge items */
-.badge-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.badge-item a{
-    text-decoration: none;
-}
-
-
-.badge-item:hover {
-    transform: translateY(-10px);
-}
-
-.badge-item img {
-    width: 125px;
+.hidden-section img { 
+    width: 20px;
     height: auto;
+}
+
+/* Cuando la sección está visible */
+.hidden-section.show {
+    max-height: 2600px; /* Altura máxima permitida (ajústalo según el contenido) */
+    opacity: 1; /* Opacidad completa */
+}
+
+/* Estilos de las tarjetas */
+.card-hidden-container {
+    display: flex;
+    justify-content: space-between; /* Alineación horizontal */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 40px;
+}
+
+.card-hidden {
+    background-color: var(--color-back-secret);
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%; /* Las tarjetas ocuparán el 50% del contenedor */
+    text-align: center;
+}
+
+/* Estilo para asegurar que todas las imágenes tengan la misma altura */
+.card-hidden img {
+    width: 100%; /* Mantener el ancho al 100% del contenedor */
+    height: 692px; /* Mantener la altura al 100% del contenedor */
+    object-position: center; /* Centrar la imagen */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 5px;
+}
+
+.card-hidden h3 {
+    color: var(--color-h3-secret);
+    font-family: var(--font-family-orbitron);
+    font-size: 1.8rem;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    align-content: center;
     margin-bottom: 10px;
 }
 
-.badge-item h3 {
+.card-hidden p {
+    color: var(--color-text-secret);
     font-family: var(--font-family-orbitron);
-    font-size: 1rem;
-    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    font-weight: 800;
+    font-style: normal;
+    margin-top: 10px;
 }
 
-/* Media Queries for responsiveness */
-
-/* Para pantallas pequeñas (móviles) */
+/* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
-    .badge h2 {
-        font-size: 1.8rem; /* Reduce tamaño del texto */
+    .card-hidden-container {
+        flex-direction: column; /* Cambia la dirección a vertical */
+        align-items: center; /* Centrar las tarjetas */
     }
 
-    .badge-item img {
-        width: 120px; /* Reduce el tamaño de las imágenes */
-    }
-
-    .badge-item h3 {
-        font-size: 1rem;
+    .card-hidden {
+        width: 80%; /* Las tarjetas ocuparán el 80% en dispositivos móviles */
+        margin-bottom: 20px;
     }
 }
 
-/* Para pantallas muy pequeñas (dispositivos móviles con anchura menor a 480px) */
+/* Media Queries para pantallas pequeñas */
 @media (max-width: 480px) {
-    .badge h2 {
-        font-size: 1.5rem; /* Aún más pequeño para pantallas muy pequeñas */
+    .card-hidden-container {
+        padding: 20px; /* Reducir el padding */
     }
 
-    .badge-item img {
-        width: 100px;
+    .card-hidden h3 {
+        font-size: 1rem; /* Reducir el tamaño del texto */
     }
 
-    .badge-item h3 {
-        font-size: 0.9rem;
-    }
-
-    /* Ajuste adicional del grid para que ocupe más espacio vertical */
-    .badge-container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Menor ancho mínimo */
-        gap: 15px;
+    .card-hidden p {
+        font-size: 0.9rem; /* Reducir el tamaño del texto */
     }
 }
+
 
 /*=========================================
             Footer Styles
