@@ -20,14 +20,14 @@ body {
     --font-family-space: 'Space Mono', serif;
 
     /* variables header */
-    --color-back-header: linear-gradient(90deg, #6A040F 0%, #370617 100%);
+    --color-back-header: #00000000;
     --color-text-header: #ffffff;
     
     /* varaibles hero */
     --color-back-hero: #000000;
     --color-h1-hero: #D40000;
     --color-text-hero: #ffffff;
-    --color-btn-hero: #F2B441;
+    --color-btn-hero: #FCA311;
     --color-btn-hero-text: #000000;
 
     /* varaibles experience */
@@ -47,13 +47,13 @@ body {
     --color-back-proj: #000000;
     --color-h2-proj: #D40000;
     --color-back-card-proj: #000000;
-    --color-tags-proj: #F2B441;
+    --color-tags-proj: #FCA311;
     --color-tags-text-proj: #000000;
     --color-h3-card-proj: #ffffff;
     --color-text-card-proj: #ffffff;
-    --color-btn-proj: #F2B441;
+    --color-btn-proj: #FCA311;
     --color-btn-proj-text: #000000;
-    --color-btn-all-proj: #F2B441;
+    --color-btn-all-proj: #FCA311;
     --color-btn-all-proj-text: #000000;
 
     /* variables certificates */
@@ -63,7 +63,7 @@ body {
     --color-h3-card-cert: #ffffff;
     --color-date-card-cert: #ffffff;
     --color-back-card-cert: #000000;
-    --color-btn-all-cert: #F2B441;
+    --color-btn-all-cert: #FCA311;
     --color-btn-all-cert-text: #000000;
 
     /* variables badge */
@@ -89,72 +89,102 @@ body {
             Header Styles
 =========================================*/
 
+/* Estilos base */
 header {
     background: var(--color-back-header);
     max-width: 100%;
     margin: 0 auto;
-    padding: 20px 40px;
+    padding: 50px 40px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.377);
+    flex-wrap: wrap;
 }
 
-header nav {
+.button-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que los enlaces se ajusten a la pantalla */
+    background-color: #fca311;
+    width: 80%;
+    height: 60px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: #fca211ab 0px 5px 15px, #0000008e 5px 10px 15px;
 }
 
-header nav a {
+.button-header {
+    outline: none;
+    border: none;
     color: var(--color-text-header);
     font-family: var(--font-family-orbitron);
-    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    font-size: 1.2rem;
     text-decoration: none;
-    font-size: 1.3rem;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    letter-spacing: 2px;
+    font-weight: 900;
+    letter-spacing: 5px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+.button-header:hover {
+    transform: translateY(-3px);
+}
+
+/* Media queries para responsividad */
+
+/* Dispositivos pequeños (smartphones en modo vertical) */
+@media (max-width: 576px) {
     header {
-        flex-direction: column; /* Apila los elementos en columnas */
-        text-align: center;
+        padding: 20px;
     }
 
-    header nav {
-        margin-top: 10px;
-        flex-direction:column;  /* Apila los enlaces de navegación verticalmente */
-        align-items:center; /* Centra los enlaces */
+    .button-container {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        flex-direction: column; /* Ajusta los botones en columna para pantallas pequeñas */
     }
 
-    header nav a {
-        margin: 10px 0; /* Añade espacio vertical entre los enlaces */
-        font-size: 1.1rem; /* Aumenta ligeramente el tamaño de la fuente para mejorar legibilidad */
-    }
-
-    header p {
-        margin-top: 15px;
+    .button-header {
+        font-size: 1rem; /* Reduce el tamaño de fuente en móviles */
+        margin: 5px 0; /* Añade espaciado entre botones en columna */
     }
 }
 
-@media (max-width: 480px) {
-    header h2 {
-        font-size: 1.2rem;
+/* Dispositivos medianos (tablets en modo horizontal) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .button-container {
+        width: 100%; /* Ajusta el ancho para tablets */
+        height: auto; /* Ajusta la altura */
+        flex-direction: column;
     }
 
-    header nav a {
-        font-size: 1rem;
-        margin: 15px 0; /* Incrementa el espacio entre enlaces en pantallas más pequeñas */
-    }
-
-    header p {
-        font-size: 0.9rem;
+    .button-header {
+        font-size: 1rem; /* Ajusta el tamaño de fuente para tablets */
     }
 }
+
+/* Dispositivos grandes (escritorios y laptops) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .button-container {
+        width: 85%;
+    }
+}
+
+/* Dispositivos extra grandes (pantallas grandes) */
+@media (min-width: 1201px) {
+    .button-container {
+        width: 75%;
+    }
+}
+
 
 /*=========================================
             Hero Styles
@@ -326,6 +356,7 @@ header nav a {
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
+    letter-spacing: 2px;
 }
 
 .experience-card-body {
@@ -988,22 +1019,22 @@ header nav a {
 =========================================*/
 .button-secret{
     text-align: center;
+    
 }
 
-    /* From Uiverse.io by namecho */ 
     button,
     button::after {
     padding: 10px 15px;
     font-size: 10px;
     background: linear-gradient(45deg, transparent 5%, #000000 5%);
     border: 0;
-    color: #9b9b9b;
+    color: #ffffff23;
     letter-spacing: 3px;
     line-height: 1;
-    box-shadow: 6px 0px 0px #00e6f6;
+    box-shadow: 6px 0px 0px #09b2be44;
     outline: transparent;
     position: relative;
-    
+    cursor: pointer;
     }
 
     button::after {
@@ -1013,14 +1044,14 @@ header nav a {
     --slice-3: inset(10% -6px 85% 0);
     --slice-4: inset(40% -6px 43% 0);
     --slice-5: inset(80% -6px 5% 0);
-    content: "HOVER ME";
+    content: "01000101 01000001 01010011 01010100 01000101 01010010 00100000 01000101 01000111 01000111";
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
+    background: linear-gradient(45deg, transparent 3%, #09b2be 3%, #00e6f6 5%, #280B34 5%);
     text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
     clip-path: var(--slice-0);
     }
