@@ -21,7 +21,7 @@ body {
 
     /* variables header */
     --color-back-header: #00000000;
-    --color-text-header: #ffffff;
+    --color-text-header: #000000;
     
     /* varaibles hero */
     --color-back-hero: #000000;
