@@ -6,14 +6,14 @@
 
 body {
     background-color: var(--color-back-body);
-    color: #000000;
+    color: #0A0A0A;
     line-height: 1.6;
 
 }
 
 :root {
-    --color-back-body: #000000;
-    --width-section: 100%;
+    --color-back-body: #0A0A0A;
+    --width-section: 90%;
 
     /* variable fonts */
     --font-family-orbitron: 'Orbitron', sans-serif;
@@ -24,27 +24,27 @@ body {
     --color-text-header: #000000;
     
     /* varaibles hero */
-    --color-back-hero: #000000;
+    --color-back-hero: #0A0A0A;
     --color-h1-hero: #D40000;
     --color-text-hero: #ffffff;
     --color-btn-hero: #FCA311;
     --color-btn-hero-text: #000000;
 
     /* varaibles experience */
-    --color-back-exp: #000000;
+    --color-back-exp: #0A0A0A;
     --color-h2-card-exp: #D40000;
     --color-h3-card-exp: #F2B441;
     --color-text-card-exp: #ffffff;
     --color-date-card-exp: #ffffff;
-    --color-back-card-exp: #000000;
+    --color-back-card-exp: #0A0A0A;
 
     /* varaibles skill */
-    --color-back-skill: #000000;
-    --color-icon-skill: #000000;
+    --color-back-skill: #0A0A0A;
+    --color-icon-skill: #0A0A0A;
     --color-h3-skill: #ffffff;
 
     /* variables projects */
-    --color-back-proj: #000000;
+    --color-back-proj: #0A0A0A;
     --color-h2-proj: #D40000;
     --color-back-card-proj: #000000;
     --color-tags-proj: #FCA311;
@@ -57,7 +57,7 @@ body {
     --color-btn-all-proj-text: #000000;
 
     /* variables certificates */
-    --color-back-cert: #000000;
+    --color-back-cert: #0A0A0A;
     --color-h2-cert: #D40000;
     --color-h2-card-cert: #F2B441;
     --color-h3-card-cert: #ffffff;
@@ -67,10 +67,10 @@ body {
     --color-btn-all-cert-text: #000000;
 
     /* variables badge */
-    --color-back-badge: #000000;
+    --color-back-badge: #0A0A0A;
 
     /* variables button secret */
-    --color-back-secret: #000000;
+    --color-back-secret: #0A0A0A;
     --color-h2-secret: #D40000;
     --color-text-secret: #ffffff;
     --color-h3-secret: #F2B441;
@@ -78,7 +78,7 @@ body {
     
 
     /* varaibles footer */
-    --color-back-footer: #0B090A;
+    --color-back-footer: #0A0A0A;
     --color-h2-footer: #D40000;
     --color-text-footer: #ffffff;
     --color-h3-footer: #F2B441;
@@ -124,10 +124,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #000;
+    color: #000000;
     transition: all ease-in-out 0.3s;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-decoration: none;
     font-weight: 900;
     letter-spacing: 5px;
@@ -221,7 +221,7 @@ header {
 .hero-text p {
     color: var(--color-text-hero);
     font-family: var(--font-family-space);
-    text-align: center;
+    text-align: justify;
     margin-bottom: 30px;
     font-size: 1.2rem;
     font-weight: 400;
@@ -278,7 +278,7 @@ header {
 /* Media Query para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
     .hero {
-        padding: 30px 20px;
+        padding: 30px 40px;
     }
 
     .hero-text h1 {
@@ -330,8 +330,10 @@ header {
 
 .experience-container {
     display: flex;
-    justify-content:space-evenly;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: row-reverse;
     align-items: stretch;
 }
 
@@ -367,7 +369,8 @@ header {
 .experience-card-body p.description{
     color: var(--color-text-card-exp);
     font-family: var(--font-family-space);
-    font-size: 1.2rem;
+    text-align: justify;
+    font-size: 1.3rem;
     margin-top: 5px;
     margin-left: 15px;
     font-weight: 400;
@@ -376,7 +379,7 @@ header {
 
 
 .timeline-item {
-    margin-top: 5px;
+    margin-top: 15px;
     display: flex;        /* Flexbox para alinear elementos en una fila */
     align-items:center;  /* Alinea verticalmente los elementos al centro */
     justify-content: space-between;
@@ -404,7 +407,7 @@ header {
 /* Large screens (desktop) */
 @media (min-width: 1024px) {
     .experience-card {
-        width: 48%; /* More space between cards on larger screens */
+        width: 90%; /* More space between cards on larger screens */
     }
 }
 
@@ -645,11 +648,12 @@ header {
 .project-details p {
     color: var(--color-text-card-proj);
     font-family: var(--font-family-space);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 1.2rem;
     margin-left: 20px;
     font-weight: 400;
     font-style: normal;
+    text-align: justify;
 }
 
 .view-details-btn {
@@ -696,6 +700,26 @@ header {
 }
 
 /* Responsive Design */
+
+/* Larger screens (1200px and above) */
+@media (min-width: 1200px) {
+    .project-card {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .project-details {
+        padding: 20px;
+    }
+
+    .project-details h3 {
+        font-size: 2rem;
+    }
+
+    .project-details p {
+        font-size: 1.1rem;
+    }
+}
 
 /* Tablets and smaller devices */
 @media (max-width: 768px) {
@@ -762,166 +786,6 @@ header {
     .view-details-btn {
         font-size: 0.8rem;
         padding: 8px 15px;
-    }
-}
-
-/* Larger screens (1200px and above) */
-@media (min-width: 1200px) {
-    .project-card {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .project-details {
-        padding: 20px;
-    }
-
-    .project-details h3 {
-        font-size: 2rem;
-    }
-
-    .project-details p {
-        font-size: 1.1rem;
-    }
-}
-
-/*=========================================
-            Certificates Styles
-=========================================*/
-/* Certificates */
-.certificate-section {
-    max-width: var(--width-section);
-    background-color: var(--color-back-cert);
-    padding: 0px 40px;
-    padding-bottom: 40px;
-    margin: 0 auto;
-}
-
-.certificate-section h2{
-    color: var(--color-h2-cert);
-    font-family: var(--font-family-orbitron);
-    font-size: 2.3rem;
-    text-align: center;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-}
-
-/* Certificado grid */
-.certificate-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-content: center;
-    padding: 40px 0px;
-}
-
-.certificate-card {
-    background-color: var(--color-back-card-cert);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.certificate-card:hover {
-    transform: translateY(-10px);
-}
-
-.certificate-card-header {
-    border-bottom: 1px solid rgb(255, 255, 255);
-    text-align: center;
-}
-
-.certificate-card-header h2{
-    color: var(--color-h2-card-cert);
-    font-family: var(--font-family-orbitron);
-    margin-bottom: 10px;
-    font-size: 1.7rem;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-}
-
-.certificate-card-body {
-    padding: 10px;
-    text-align: left;
-}
-
-.certificate-timeline-item {
-    margin-top: 5px;
-    display: flex;        /* Flexbox para alinear elementos en una fila */
-    align-items:center;  /* Alinea verticalmente los elementos al centro */
-    justify-content: space-between;
-}
-
-.certificate-timeline-item h3{
-    color: var(--color-h3-card-cert);
-    font-family: var(--font-family-orbitron);
-    font-size: 1.2rem;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.certificate-date {
-    color: var(--color-date-card-cert);
-    font-family: var(--font-family-space);
-    font-size: 1rem;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.cert-view-all-btn{
-    display: flex;
-    justify-content: center;
-}
-
-/* Botón de "View All" */
-.cer-view-all-btn {
-    background-color: var(--color-btn-all-cert);
-    color: var(--color-btn-all-cert-text);
-    font-family: var(--font-family-orbitron);
-    text-decoration: none;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.cer-view-all-btn:hover {
-    background-color: #f2b441c5;
-}
-
-/* Media Queries para diferentes tamaños de pantalla */
-
-/* Tablets y pantallas medianas */
-@media (max-width: 1024px) {
-    .certificate-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
-    }
-}
-
-/* Smartphones y pantallas pequeñas */
-@media (max-width: 768px) {
-    .certificate-section {
-        max-width: 100%;
-    }
-    .certificate-grid {
-        grid-template-columns: 1fr; /* 1 columna en móviles */
-    }
-
-    .certificate-header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .cer-view-all-btn {
-        margin-top: 15px; /* Añade espacio entre el botón y el texto en pantallas pequeñas */
     }
 }
 
@@ -1026,7 +890,7 @@ header {
     button::after {
     padding: 10px 15px;
     font-size: 10px;
-    background: linear-gradient(45deg, transparent 5%, #000000 5%);
+    background: linear-gradient(45deg, transparent 5%, #0A0A0A 5%);
     border: 0;
     color: #ffffff23;
     letter-spacing: 3px;
@@ -1224,126 +1088,96 @@ header {
 /*=========================================
             Footer Styles
 =========================================*/
-/*FOOTER*/
-/* Estilos generales para dispositivos grandes */
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--color-back-footer);
     font-family: var(--font-family-space);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 20px 40px;
-}
-
-.contact-footer{
-    margin-top: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    padding: 40px 40px;
 }
 
 
-.footer-container {   
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.footer-container h2 {
-    color: var(--color-h2-footer);
-    font-family: var(--font-family-orbitron);
-    font-size: 2rem;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    margin-bottom: 10px;
-}
-
-.contact-footer h3{
-    color: var(--color-h3-footer);
-    font-family: var(--font-family-orbitron);
-    font-size: 1.2rem;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.footer-container p {
-    color: var(--color-text-footer);
+.card-footer {
     font-family: var(--font-family-space);
-    font-size: 1.2rem;
-    font-optical-sizing: auto;
+    width: 80%;
+    max-width: 90%; /* Prevent it from getting too wide on large screens */
+    min-width: 250px; /* Ensure readability on small screens */
+    height: auto; /* Allow height to adjust based on content */
+    min-height: 110px;
+    translate: -6px -6px;
+    background: #ffffff;
+    color: #000000;
+    border: 1.3px solid #000000;
+    box-shadow: 12px 12px 0 #c81d78b6;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin: 0 auto; /* Center card if needed */
+}
+
+.head {
+    text-align: center;
+    font-family: var(--font-family-orbitron);
+    font-size: clamp(20px, 5vw, 23px); /* Responsive font size */
     font-weight: 700;
-    font-style: normal;
+    width: 100%;
+    height: auto; /* Allow height to adjust */
+    min-height: 60px;
+    background: linear-gradient(90deg, #c81d77, #6710c2);
+    padding: 5px 12px;
+    color: #000000;
+    border-bottom: 3px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.contact-info {
-    text-align: center; /* Centra el texto */
-    margin-bottom: 20px; /* Espacio entre el texto de contacto y los iconos de redes sociales */
+.window-controls {
+    display: flex;
 }
 
-.social-icons-container {
-    display: flex; /* Flexbox para alinear los iconos en una fila */
-    justify-content: center; /* Alinea los iconos en el centro */
-    gap: 20px; /* Espacio entre los iconos */
+.control-button {
+    width: 20px;
+    height: 20px;
+    background-color: #c0c0c0;
+    border: 1px outset white;
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
 }
 
-.icon-container-footer img {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.3s ease;
+.content {
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px;
+    font-size: clamp(0.5rem, 3vw, 1.5rem); /* Responsive font size */
+    font-weight: 600;
+    text-decoration: none;
 }
 
-.icon-container-footer img:hover {
-    transform: scale(1.1); /* Efecto al pasar el cursor sobre los iconos */
+.card:hover {
+    translate: -6px;
 }
 
-
-/* Media queries para dispositivos móviles */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column; /* Apila los elementos verticalmente */
-        text-align: center; /* Alinea todo al centro */
-    }
-
-    .footer-container h2 {
-        font-size: 2rem; /* Reduce el tamaño de fuente en pantallas pequeñas */
-    }
-    .footer-container p {
-        font-size: 1.2rem;
-    }
-
-    .icon-container-footer img {
-        width: 40px; /* Ajusta el tamaño de los íconos */
-        height: 40px;
+/* Media queries for different device sizes */
+@media screen and (max-width: 768px) {
+    .card-footer {
+    width: 90%;
+    translate: -4px -4px;
+    box-shadow: 8px 8px 0 #c81d78b6;
     }
 }
 
-/* Media queries para pantallas muy pequeñas (ej. móviles) */
-@media (max-width: 480px) {
-    footer {
-        padding: 15px; /* Reduce el padding */
-        font-size: 0.9rem; /* Ajusta el tamaño general del texto */
+@media screen and (max-width: 480px) {
+    .card-footer {
+    width: 95%;
+    translate: -3px -3px;
+    box-shadow: 6px 6px 0 #c81d78b6;
     }
-
-    .footer-container p {
-        font-size: 0.9rem; /* Reduce más el tamaño de la fuente */
-    }
-
-    .footer-container h2 {
-        font-size: 2rem;
-    }
-
-    .icon-container-footer img {
-        width: 35px; /* Íconos más pequeños */
-        height: 35px;
+    
+    .card:hover {
+        translate: -3px;
     }
 }
