@@ -225,9 +225,8 @@ a {
 
 .case-study {
     width: var(--container-narrow);
-    padding-bottom: var(--space-6);
+    padding-bottom: var(--space-3);
 }
-
 
 /* ============================================================================
    4. MOTIVOS HUD
@@ -550,6 +549,7 @@ header {
 .hero-text {
     width: 100%;
     text-align: center;
+    justify-content: center;
 }
 
 .hero-text > p {
@@ -564,7 +564,7 @@ header {
     font-weight: 900;
     line-height: 1.05;
     letter-spacing: 1px;
-    margin-bottom: var(--space-2);
+    margin-bottom: var(--space-3);
 }
 
 .hero-role {
@@ -583,7 +583,7 @@ header {
     font-size: var(--step-0);
     /* El justificado abría ríos de espacio en móvil: en una columna estrecha
        y con tipografía monoespaciada es especialmente visible. */
-    text-align: left;
+    text-align: justify;
     margin-bottom: var(--space-3);
 }
 

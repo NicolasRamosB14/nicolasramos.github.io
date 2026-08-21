@@ -35,12 +35,11 @@ const TRANSLATIONS = {
     "hero.greeting": "Nicolás Ramos",
     "hero.role": "Analista de Datos · Data Engineer Junior · Analytics Engineer",
     "hero.intro": "Ingeniero de Telecomunicaciones orientado a <strong>datos</strong>, con conocimientos iniciales en análisis, modelado e <strong>ingeniería de datos</strong>. Trabajo con <strong>Python</strong> y <strong>SQL</strong> a lo largo del recorrido del dato: integración de fuentes y APIs, transformación y modelado en <strong>BigQuery</strong>, y reportería en <strong>Looker Studio</strong> y <strong>Power BI</strong>, con experiencia práctica construyendo pipelines ELT que se ejecutan a diario sobre Google Cloud. Me apoyo en <strong>IA generativa</strong> para programar, documentar y aprender.",
-    "hero.seeking": "Busco una posición junior en datos — análisis, Analytics Engineering o Data Engineering — donde aportar y seguir creciendo dentro de un equipo.",
+    "hero.seeking": "Busco una posición junior en datos — Data Analytics, Analytics Engineering o Data Engineering. — donde aportar y seguir creciendo dentro de un equipo.",
     "hero.cvEs": "Descargar CV (Español)",
     "hero.cvEn": "Descargar CV (English)",
 
     "stack.title": "Stack técnico",
-    "stack.subtitle": "Tecnologías que uso en trabajo real, no en tutoriales.",
     "stack.languages": "Lenguajes",
     "stack.cloud": "Google Cloud",
     "stack.engineering": "Ingeniería de datos",
@@ -162,9 +161,7 @@ const TRANSLATIONS = {
     "cs.decisionsTitle": "Decisiones técnicas",
     "cs.challengesTitle": "Problemas encontrados",
     "cs.outcomeTitle": "Resultado",
-    "cs.outcomeBody": "Los cinco pipelines quedaron desplegados y ejecutándose a diario sin intervención. El cliente pasó a consultar en Looker Studio datos que antes exigían exportar y cruzar hojas de cálculo a mano. Las cifras cargadas fueron reconciliadas una a una contra la interfaz de cada plataforma antes de darlas por buenas.",
-    "cs.notBuiltTitle": "Qué no tiene",
-    "cs.notBuiltBody": "Por honestidad técnica, y porque en una entrevista se pregunta: el proyecto no tiene tests automatizados, ni CI/CD, ni infraestructura como código. La validación fue manual y documentada, y el despliegue se hace por línea de comandos. Son las tres cosas que más arriba están en mi lista de aprendizaje."
+    "cs.outcomeBody": "Los cinco pipelines quedaron desplegados y ejecutándose a diario sin intervención. El cliente pasó a consultar en Looker Studio datos que antes exigían exportar y cruzar hojas de cálculo a mano. Las cifras cargadas fueron reconciliadas una a una contra la interfaz de cada plataforma antes de darlas por buenas."
   },
 
   /* ---------------------------------------------------------------- EN -- */
