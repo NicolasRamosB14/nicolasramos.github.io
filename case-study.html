@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Caso de estudio — Plataforma de datos | Nicolás Ramos</title>
+    <meta name="description" content="Caso de estudio técnico: cinco pipelines ELT sobre Google Cloud. Cómo está organizado, decisiones técnicas y problemas resueltos.">
+    <meta name="author" content="Nicolás Ramos Bolaños">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Caso de estudio — Plataforma de datos de marketing y e-commerce">
+    <meta property="og:description" content="Cinco pipelines ELT sobre Google Cloud.">
+
+    <link rel="icon" type="image/x-icon" href="Images/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Orbitron:wght@400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body class="case-study-page">
+
+    <header>
+        <div class="button-container">
+            <a href="index.html" class="button-header" data-i18n="cs.back">← Volver al portafolio</a>
+            <button type="button" id="lang-toggle" class="button-header lang-toggle"
+                    data-i18n="nav.lang" data-i18n-label="nav.langLabel" aria-label="Ver el sitio en inglés">EN</button>
+        </div>
+    </header>
+
+    <main class="case-study">
+
+        <!-- ================= Cabecera ================= -->
+        <section class="cs-hero">
+            <h1 data-i18n="cs.title">Plataforma de datos de marketing y e-commerce</h1>
+            <p class="cs-subtitle" data-i18n="cs.subtitle">Cinco pipelines ELT sobre Google Cloud</p>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">BigQuery</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Cloud Run</span>
+                <span class="tag">Cloud Scheduler</span>
+                <span class="tag">Looker Studio</span>
+            </div>
+            <p class="cs-notice" data-i18n="cs.confidential">
+                Trabajo realizado en Flupix para un cliente del sector e-commerce y retail.
+            </p>
+        </section>
+
+        <!-- ================= Resumen ================= -->
+        <section class="cs-block">
+            <h2 data-i18n="cs.overviewTitle">Resumen</h2>
+            <p data-i18n="cs.overviewBody"></p>
+        </section>
+
+        <!-- ================= Problema ================= -->
+        <section class="cs-block">
+            <h2 data-i18n="cs.problemTitle">El problema</h2>
+            <p data-i18n="cs.problemBody"></p>
+        </section>
+
+        <!-- ================= Arquitectura + diagrama ================= -->
+        <section class="cs-block">
+            <h2 data-i18n="cs.archTitle">Cómo está organizado</h2>
+            <p data-i18n="cs.archBody"></p>
+
+        </section>
+
+        <!-- ================= Stack ================= -->
+        <section class="cs-block">
+            <h2 data-i18n="cs.stackTitle">Stack</h2>
+            <div class="stack-grid">
+                <div class="stack-group stack-group-wide">
+                    <h3 data-i18n="cs.stackApis">APIs integradas</h3>
+                    <p>Shopify Admin GraphQL · Meta Graph · Google Analytics Data API · Mailchimp Marketing API · YouTube Data API + YouTube Analytics API</p>
+                </div>
+                <div class="stack-group">
+                    <h3 data-i18n="stack.languages">Lenguajes</h3>
+                    <p>Python · pandas · SQL</p>
+                </div>
+                <div class="stack-group">
+                    <h3 data-i18n="stack.cloud">Google Cloud</h3>
+                    <p>BigQuery · Cloud Run Jobs · Cloud Scheduler · Secret Manager · Artifact Registry · IAM</p>
+                </div>
+                <div class="stack-group">
+                    <h3 data-i18n="stack.systems">Contenedores y sistemas</h3>
+                    <p>Docker · Linux · Bash</p>
+                </div>
+                <div class="stack-group">
+                    <h3 data-i18n="cs.stackConsume">Consumo</h3>
+                    <p>Looker Studio</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= Flujo de datos ================= -->
+        <section class="cs-block">
+            <h2 data-i18n="cs.flowTitle">Flujo de datos</h2>
+            <div class="cs-diagram">
+                <!--
+                    Diagrama en SVG inline: escala a cualquier ancho sin perder
+                    nitidez, pesa menos que una imagen y sus etiquetas son texto
+                    real, así que se traducen con el resto de la página y se
+                    pueden seleccionar y buscar.
+                -->
+                <svg viewBox="0 0 1140 470" role="img" aria-labelledby="diagram-title" preserveAspectRatio="xMidYMid meet">
+                    <title id="diagram-title" data-i18n="cs.flowTitle">Flujo de datos</title>
+
+                    <defs>
+                        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+                                markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                            <path d="M 0 0 L 10 5 L 0 10 z" fill="#FCA311"></path>
+                        </marker>
+                    </defs>
+
+                    <!-- ---------- Columna 1: fuentes ---------- -->
+                    <text class="d-caption" x="20" y="30" data-i18n="cs.diagSources">Fuentes</text>
+                    <g class="d-box d-box-source">
+                        <rect x="20" y="45" width="170" height="46" rx="6"></rect>
+                        <text class="d-label" x="105" y="74">Shopify (GraphQL)</text>
+                    </g>
+                    <g class="d-box d-box-source">
+                        <rect x="20" y="103" width="170" height="46" rx="6"></rect>
+                        <text class="d-label" x="105" y="132">Meta Graph</text>
+                    </g>
+                    <g class="d-box d-box-source">
+                        <rect x="20" y="161" width="170" height="46" rx="6"></rect>
+                        <text class="d-label" x="105" y="190">Google Analytics 4</text>
+                    </g>
+                    <g class="d-box d-box-source">
+                        <rect x="20" y="219" width="170" height="46" rx="6"></rect>
+                        <text class="d-label" x="105" y="248">Mailchimp</text>
+                    </g>
+                    <g class="d-box d-box-source">
+                        <rect x="20" y="277" width="170" height="46" rx="6"></rect>
+                        <text class="d-label" x="105" y="306">YouTube</text>
+                    </g>
+
+                    <!-- flechas fuentes -> extracción -->
+                    <path class="d-arrow" d="M 195 68  H 230 V 175 H 245" marker-end="url(#arrow)"></path>
+                    <path class="d-arrow" d="M 195 126 H 230 V 175 H 245" marker-end="url(#arrow)"></path>
+                    <path class="d-arrow" d="M 195 184 H 245" marker-end="url(#arrow)"></path>
+                    <path class="d-arrow" d="M 195 242 H 230 V 193 H 245" marker-end="url(#arrow)"></path>
+                    <path class="d-arrow" d="M 195 300 H 230 V 193 H 245" marker-end="url(#arrow)"></path>
+
+                    <!-- ---------- Columna 2: extracción ---------- -->
+                    <text class="d-caption" x="255" y="30" data-i18n="cs.diagExtract">Extracción (Python)</text>
+                    <g class="d-box d-box-proc">
+                        <rect x="255" y="45" width="195" height="278" rx="8"></rect>
+                        <text class="d-label" x="352" y="90">extractors/</text>
+                        <text class="d-sub" x="352" y="130">ThreadPoolExecutor</text>
+                        <text class="d-sub" x="352" y="155">Retry + backoff + jitter</text>
+                        <text class="d-sub" x="352" y="180">Rate limiting</text>
+                        <text class="d-sub" x="352" y="205">Paginación adaptativa</text>
+                        <text class="d-sub" x="352" y="230">Validación fail-fast</text>
+                        <text class="d-label" x="352" y="280">loaders/</text>
+                    </g>
+
+                    <path class="d-arrow" d="M 455 184 H 505" marker-end="url(#arrow)"></path>
+
+                    <!-- ---------- Columna 3: capa base ---------- -->
+                    <text class="d-caption" x="515" y="30" data-i18n="cs.diagBase">Capa base</text>
+                    <g class="d-box d-box-store">
+                        <rect x="515" y="45" width="185" height="278" rx="8"></rect>
+                        <text class="d-label" x="607" y="90">BigQuery</text>
+                        <text class="d-sub" x="607" y="130" data-i18n="cs.diagBaseDetail">Tablas de hechos y dimensiones</text>
+                        <text class="d-mono" x="607" y="175">fact_orders</text>
+                        <text class="d-mono" x="607" y="200">dim_customers</text>
+                        <text class="d-mono" x="607" y="225">dim_products</text>
+                        <text class="d-mono" x="607" y="250">fact_ga4_daily</text>
+                        <text class="d-sub" x="607" y="292">WRITE_APPEND</text>
+                    </g>
+
+                    <path class="d-arrow" d="M 705 184 H 755" marker-end="url(#arrow)"></path>
+
+                    <!-- ---------- Columna 4: capa oro ---------- -->
+                    <text class="d-caption" x="765" y="30" data-i18n="cs.diagGold">Capa oro</text>
+                    <g class="d-box d-box-gold">
+                        <rect x="765" y="45" width="185" height="278" rx="8"></rect>
+                        <text class="d-label" x="857" y="90">SQL</text>
+                        <text class="d-sub" x="857" y="130" data-i18n="cs.diagGoldDetail">Particionada y clusterizada</text>
+                        <text class="d-mono" x="857" y="175">QUALIFY ROW_NUMBER()</text>
+                        <text class="d-mono" x="857" y="200">PARTITION BY</text>
+                        <text class="d-mono" x="857" y="225">CLUSTER BY</text>
+                        <text class="d-mono" x="857" y="250">*_all_data_gold</text>
+                        <text class="d-sub" x="857" y="292">CREATE OR REPLACE</text>
+                    </g>
+
+                    <path class="d-arrow" d="M 955 184 H 1000" marker-end="url(#arrow)"></path>
+
+                    <!-- ---------- Columna 5: consumo ---------- -->
+                    <text class="d-caption" x="1010" y="30" data-i18n="cs.diagConsume">Consumo</text>
+                    <g class="d-box d-box-out">
+                        <rect x="1010" y="140" width="110" height="88" rx="6"></rect>
+                        <text class="d-label d-label-sm" x="1065" y="180">Looker</text>
+                        <text class="d-label d-label-sm" x="1065" y="202">Studio</text>
+                    </g>
+
+                    <!-- ---------- Banda de orquestación ---------- -->
+                    <g class="d-box d-box-orch">
+                        <rect x="255" y="360" width="695" height="58" rx="8"></rect>
+                        <text class="d-label" x="602" y="395" data-i18n="cs.diagOrchestration">Docker · Cloud Run Jobs · Cloud Scheduler (diario)</text>
+                    </g>
+                    <path class="d-arrow d-arrow-dashed" d="M 352 355 V 330"></path>
+                    <path class="d-arrow d-arrow-dashed" d="M 607 355 V 330"></path>
+                    <path class="d-arrow d-arrow-dashed" d="M 857 355 V 330"></path>
+                </svg>
+            </div>
+            <p class="cs-caption" data-i18n="cs.flowBody"></p>
+        </section>
+
+        <!-- ================= Implementación ================= -->
+        <section class="cs-block">
+            <h2 data-i18n="cs.implTitle">Qué construí</h2>
+            <ul class="cs-list">
+                <li data-i18n="cs.impl1"></li>
+                <li data-i18n="cs.impl2"></li>
+                <li data-i18n="cs.impl3"></li>
+                <li data-i18n="cs.impl4"></li>
+                <li data-i18n="cs.impl5"></li>
+                <li data-i18n="cs.impl6"></li>
+            </ul>
+        </section>
+
+        <!-- ================= Decisiones ================= -->
+        <section class="cs-block">
+            <h2 data-i18n="cs.decisionsTitle">Decisiones técnicas</h2>
+            <div class="cs-cards">
+                <article class="cs-card">
+                    <h3 data-i18n="cs.dec1title"></h3>
+                    <p data-i18n="cs.dec1body"></p>
+                </article>
+                <article class="cs-card">
+                    <h3 data-i18n="cs.dec2title"></h3>
+                    <p data-i18n="cs.dec2body"></p>
+                </article>
+                <article class="cs-card">
+                    <h3 data-i18n="cs.dec3title"></h3>
+                    <p data-i18n="cs.dec3body"></p>
+                </article>
+                <article class="cs-card">
+                    <h3 data-i18n="cs.dec4title"></h3>
+                    <p data-i18n="cs.dec4body"></p>
+                </article>
+                <article class="cs-card">
+                    <h3 data-i18n="cs.dec5title"></h3>
+                    <p data-i18n="cs.dec5body"></p>
+                </article>
+                <article class="cs-card">
+                    <h3 data-i18n="cs.dec6title"></h3>
+                    <p data-i18n="cs.dec6body"></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= Problemas ================= -->
+        <section class="cs-block">
+            <h2 data-i18n="cs.challengesTitle">Problemas encontrados</h2>
+            <div class="cs-cards">
+                <article class="cs-card">
+                    <h3 data-i18n="cs.ch1title"></h3>
+                    <p data-i18n="cs.ch1body"></p>
+                </article>
+                <article class="cs-card">
+                    <h3 data-i18n="cs.ch2title"></h3>
+                    <p data-i18n="cs.ch2body"></p>
+                </article>
+                <article class="cs-card">
+                    <h3 data-i18n="cs.ch3title"></h3>
+                    <p data-i18n="cs.ch3body"></p>
+                </article>
+                <article class="cs-card">
+                    <h3 data-i18n="cs.ch4title"></h3>
+                    <p data-i18n="cs.ch4body"></p>
+                </article>
+                <article class="cs-card">
+                    <h3 data-i18n="cs.ch5title"></h3>
+                    <p data-i18n="cs.ch5body"></p>
+                </article>
+                <article class="cs-card">
+                    <h3 data-i18n="cs.ch6title"></h3>
+                    <p data-i18n="cs.ch6body"></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= Resultado ================= -->
+        <section class="cs-block">
+            <h2 data-i18n="cs.outcomeTitle">Resultado</h2>
+            <p data-i18n="cs.outcomeBody"></p>
+        </section>
+
+        <!-- ================= Límites ================= -->
+        <section class="cs-block cs-block-honest">
+            <h2 data-i18n="cs.notBuiltTitle">Qué no tiene</h2>
+            <p data-i18n="cs.notBuiltBody"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div id="Contacto" class="card-footer">
+            <div class="head">
+                C:\Windows\system32\CONTACTO.exe
+                <div class="window-controls">
+                    <div class="control-button">—</div>
+                    <div class="control-button">◻</div>
+                    <div class="control-button">✕</div>
+                </div>
+            </div>
+            <div class="content">
+                <span class="degradado">H:\</span><span data-i18n="footer.linkedin">linkedin</span><span class="degradado"> &gt; </span>
+                <a href="https://www.linkedin.com/in/nicol%C3%A1sramos" target="_blank" rel="noopener">linkedin.com/in/nicolásramos</a>
+                <br>
+                <span class="degradado">F:\</span><span data-i18n="footer.github">GitHub</span><span class="degradado"> &gt; </span>
+                <a href="https://github.com/NicolasRamosB14" target="_blank" rel="noopener">github.com/NicolasRamosB14</a>
+                <br>
+                <span class="degradado">C:\</span><span data-i18n="footer.email">Correo</span><span class="degradado"> &gt; </span>
+                <a href="mailto:nicolasramosb14@gmail.com">nicolasramosb14@gmail.com</a>
+                <br>
+                <span class="degradado">D:\</span><span data-i18n="footer.city">Ciudad</span><span class="degradado"> &gt; </span>
+                <span data-i18n="footer.cityValue">Bogotá, Colombia</span>
+                <br>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+</body>
+
+</html>

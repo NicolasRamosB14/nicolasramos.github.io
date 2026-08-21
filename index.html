@@ -1,325 +1,336 @@
 <!DOCTYPE html>
 <html lang="es">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Nicolás Ramos - Portafolio</title>
-        <link rel="icon" type="image/x-icon" href="Images/icon.png">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Orbitron:wght@400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    </head>
 
-    <body>
-        <!-- Header Section -->
-        <header>
-            <div class="button-container">
-                <a href="#Proyectos" class="button-header">    
-                    Proyectos
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Nicolás Ramos — Analista de Datos</title>
+    <meta name="description" content="Ingeniero de Telecomunicaciones orientado a datos, con conocimientos iniciales en análisis, modelado e ingeniería de datos: Python, SQL, BigQuery, Google Cloud, Looker Studio y Power BI.">
+    <meta name="author" content="Nicolás Ramos Bolaños">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nicolás Ramos — Analista de Datos">
+    <meta property="og:description" content="Análisis, modelado e ingeniería de datos: Python, SQL, BigQuery, Google Cloud, Looker Studio y Power BI.">
+    <meta property="og:url" content="https://nicolasramosb14.github.io/nicolasramos.github.io/">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" type="image/x-icon" href="Images/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Orbitron:wght@400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="button-container">
+            <a href="#Experiencia" class="button-header" data-i18n="nav.experience">Experiencia</a>
+            <a href="#Proyectos" class="button-header" data-i18n="nav.projects">Proyectos</a>
+            <a href="https://www.linkedin.com/in/nicol%C3%A1sramos" target="_blank" rel="noopener" class="button-header" data-i18n="nav.linkedin">LinkedIn</a>
+            <a href="#Contacto" class="button-header" data-i18n="nav.contact">Contacto</a>
+            <button type="button" id="lang-toggle" class="button-header lang-toggle"
+                    data-i18n="nav.lang" data-i18n-label="nav.langLabel" aria-label="Ver el sitio en inglés">EN</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1 class="glitch" data-i18n="hero.greeting" data-text="Nicolás Ramos">Nicolás Ramos</h1>
+            <p class="hero-role" data-i18n="hero.role">Analista de Datos · Data Engineer Junior · Analytics Engineer</p>
+            <p data-i18n="hero.intro">
+                Ingeniero de Telecomunicaciones orientado a <strong>datos</strong>, con conocimientos
+                iniciales en análisis, modelado e <strong>ingeniería de datos</strong>.
+            </p>
+            <p class="hero-seeking" data-i18n="hero.seeking">
+                Busco una posición junior en datos — análisis, Analytics Engineering o Data Engineering.
+            </p>
+            <div class="hero-actions">
+                <a href="CV-Nicolas-Ramos-ES.pdf" download class="btn-primary">
+                    <img src="Images/descargas.png" alt="" aria-hidden="true">
+                    <span data-i18n="hero.cvEs">Descargar CV (Español)</span>
                 </a>
-                <a href="https://www.linkedin.com/in/nicolás-ramos-bolaños14" target="_blank" class="button-header">    
-                    LinkedIn
-                </a>
-                <a href="#Contacto" class="button-header">    
-                    Contacto
+                <a href="CV-Nicolas-Ramos-EN.pdf" download class="btn-primary btn-secondary">
+                    <img src="Images/descargas.png" alt="" aria-hidden="true">
+                    <span data-i18n="hero.cvEn">Descargar CV (English)</span>
                 </a>
             </div>
-        </header>
+        </div>
+    </section>
 
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-text">
-                <h1>¡Hola! Soy <br> Nicolás Ramos </h1>
-                <p>
-                    Graduado en <strong>Ingeniería de Telecomunicaciones</strong> y con un fuerte interés en el mundo del <strong>
-                    análisis de datos</strong> y las <strong>Tecnologías de la Información (TI)</strong>.  
-                    Soy una persona proactiva y orientada a resultados, mi objetivo es comenzar una trayectoria profesional en el 
-                    <strong>sector tecnológico</strong> en una posición que me permita crecer, aportar valor y continuar mi aprendizaje.
+    <!-- Stack Section -->
+    <section class="stack-section">
+        <h2 data-i18n="stack.title">Stack técnico</h2>
+        <p class="section-subtitle" data-i18n="stack.subtitle">Tecnologías que uso en trabajo real, no en tutoriales.</p>
+        <div class="stack-grid">
+            <div class="stack-group stack-group-wide">
+                <h3 data-i18n="stack.engineering">Ingeniería de datos</h3>
+                <p data-i18n="stack.engineeringItems">Procesos ETL/ELT · APIs REST y GraphQL · Cargas incrementales · Limpieza y transformación con pandas · Tablas de hechos y dimensiones · Particionamiento y clustering · Calidad de datos</p>
+            </div>
+            <div class="stack-group">
+                <h3 data-i18n="stack.languages">Lenguajes</h3>
+                <p>Python · pandas · SQL</p>
+            </div>
+            <div class="stack-group">
+                <h3 data-i18n="stack.cloud">Google Cloud</h3>
+                <p>BigQuery · Cloud Run Jobs · Cloud Scheduler · Secret Manager · Artifact Registry · IAM</p>
+            </div>
+            <div class="stack-group">
+                <h3 data-i18n="stack.systems">Contenedores y sistemas</h3>
+                <p>Docker · Linux · Bash</p>
+            </div>
+            <div class="stack-group">
+                <h3 data-i18n="stack.bi">BI y analítica</h3>
+                <p>Looker Studio · Power BI · Excel · Google Sheets</p>
+            </div>
+            <div class="stack-group">
+                <h3 data-i18n="stack.vcs">Control de versiones</h3>
+                <p>Git · GitHub</p>
+            </div>
+            <div class="stack-group stack-group-wide">
+                <h3 data-i18n="stack.ai">IA aplicada</h3>
+                <p data-i18n="stack.aiItems">IA generativa como apoyo al desarrollo · Diseño de prompts · Agentes con instrucciones y comandos personalizados · Skills · Subagentes · MCP</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="Experiencia" class="timeline-section">
+        <h2 data-i18n="exp.title">Experiencia</h2>
+        <div class="timeline">
+            <article class="timeline-entry">
+                <div class="timeline-entry-head">
+                    <h3 data-i18n="exp.freelanceRole">Analista de Datos Jr. / Ingeniero de Datos Jr.</h3>
+                    <span class="timeline-date" data-i18n="exp.freelanceDate">Mar — Ago 2026</span>
+                </div>
+                <p class="timeline-org" data-i18n="exp.freelanceOrg">Flupix · Social Media, Ads y e-commerce</p>
+                <p data-i18n="exp.freelanceDesc">
+                    Consolidé en BigQuery las métricas de Social Media, Ads y e-commerce.
                 </p>
-                <a href="CV - Nicolas Ramos.pdf" download="CV - Nicolas Ramos.pdf" class="btn-primary">
-                    <img src="Images\descargas.png" alt="Icono de descarga">
-                    Descargar CV
+                <a href="case-study.html" class="inline-link" data-i18n="exp.freelanceLink">Ver el caso de estudio técnico</a>
+            </article>
+
+            <article class="timeline-entry">
+                <div class="timeline-entry-head">
+                    <h3 data-i18n="exp.claroRole">Practicante universitario</h3>
+                    <span class="timeline-date" data-i18n="exp.claroDate">Feb — Jul 2023</span>
+                </div>
+                <p class="timeline-org" data-i18n="exp.claroOrg">Claro Colombia · Bogotá</p>
+                <p data-i18n="exp.claroDesc">
+                    Informes de seguimiento sobre viabilidades y entregas de fibra.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="Proyectos" class="projects-section">
+        <h2 data-i18n="proj.title">Proyectos</h2>
+
+        <!-- Featured project -->
+        <article class="project-featured">
+            <span class="featured-badge" data-i18n="proj.featured">Proyecto principal</span>
+            <h3 data-i18n="proj.pipelineTitle">Plataforma de datos de marketing y e-commerce</h3>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">BigQuery</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Cloud Run</span>
+                <span class="tag">Looker Studio</span>
+            </div>
+            <p data-i18n="proj.pipelineDesc">
+                Cinco pipelines ELT en producción.
+            </p>
+            <a href="case-study.html" class="view-details-btn" data-i18n="proj.pipelineCta">Leer el caso de estudio</a>
+        </article>
+
+        <!-- Secondary projects -->
+        <div class="project-container">
+            <div class="project-card-wrapper">
+                <div class="project-card">
+                    <div class="project-details">
+                        <div class="tags">
+                            <span class="tag">Looker Studio</span>
+                            <span class="tag">Google Sheets</span>
+                        </div>
+                        <h3 data-i18n="proj.ongTitle">Dashboard de gestión financiera para ONG</h3>
+                        <p data-i18n="proj.ongDesc">Dashboard de seguimiento de ingresos y gastos.</p>
+                        <a href="https://lookerstudio.google.com/reporting/57b70853-91dd-4f23-8f49-6686c0040061"
+                           target="_blank" rel="noopener" class="view-details-btn" data-i18n="proj.viewDetails">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card-wrapper">
+                <div class="project-card">
+                    <div class="project-details">
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">pandas</span>
+                            <span class="tag">Seaborn</span>
+                        </div>
+                        <h3 data-i18n="proj.edaTitle">Análisis exploratorio de datos — Gym Members</h3>
+                        <p data-i18n="proj.edaDesc">Análisis de un dataset de 973 registros y 15 variables.</p>
+                        <a href="https://github.com/NicolasRamosB14/Analisis_Exploratorio_de_Datos_Python"
+                           target="_blank" rel="noopener" class="view-details-btn" data-i18n="proj.viewDetails">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card-wrapper">
+                <div class="project-card">
+                    <div class="project-details">
+                        <div class="tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">DAX</span>
+                            <span class="tag">Power Query</span>
+                        </div>
+                        <h3 data-i18n="proj.pbiTitle">Portafolio de reportes en Power BI</h3>
+                        <p data-i18n="proj.pbiDesc">Dashboards interactivos sobre distintos temas.</p>
+                        <a href="https://app.powerbi.com/view?r=eyJrIjoiNmY3NWIwYTEtZTQwMC00NDIyLWI3Y2QtYjYxZmVlNmM0NWRlIiwidCI6Ijc5ODcxZWIxLTYwOTYtNDJiZi05OGVmLWI0ZjNlNGVmODMxOCIsImMiOjR9"
+                           target="_blank" rel="noopener" class="view-details-btn" data-i18n="proj.viewDetails">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="timeline-section">
+        <h2 data-i18n="edu.title">Educación</h2>
+        <div class="timeline">
+            <article class="timeline-entry">
+                <div class="timeline-entry-head">
+                    <h3 data-i18n="edu.degree">Ingeniería de Telecomunicaciones</h3>
+                    <span class="timeline-date" data-i18n="edu.degreeDate">Ago 2017 — Jul 2023</span>
+                </div>
+                <p class="timeline-org" data-i18n="edu.degreeOrg">Universidad Piloto de Colombia · Bogotá</p>
+            </article>
+            <article class="timeline-entry">
+                <div class="timeline-entry-head">
+                    <h3 data-i18n="edu.courseName">Fundamentos de Data Analytics</h3>
+                    <span class="timeline-date" data-i18n="edu.courseDate">Ago — Nov 2024</span>
+                </div>
+                <p class="timeline-org" data-i18n="edu.courseOrg">IBM &amp; Guayerd</p>
+            </article>
+        </div>
+
+        <h3 class="badge-title" data-i18n="edu.badges">Certificaciones verificables</h3>
+        <div class="badge-container">
+            <div class="badge-item">
+                <a href="https://www.credly.com/badges/c0772cc4-faa8-44e9-b74e-421a02f7a275/public_url" target="_blank" rel="noopener">
+                    <img src="Images/data-fundamentals.png" alt="Badge: Data Fundamentals">
+                    <h3>Data Fundamentals</h3>
                 </a>
             </div>
-        </section>
+            <div class="badge-item">
+                <a href="https://www.credly.com/badges/1f83df31-6c23-4f67-8f34-5723710a028f/public_url" target="_blank" rel="noopener">
+                    <img src="Images/artificial-intelligence-fundamentals.png" alt="Badge: Artificial Intelligence Fundamentals">
+                    <h3>Artificial Intelligence Fundamentals</h3>
+                </a>
+            </div>
+            <div class="badge-item">
+                <a href="https://www.credly.com/badges/9f124540-1b45-40f7-8928-471cc015e318/public_url" target="_blank" rel="noopener">
+                    <img src="Images/network-support-and-security.png" alt="Badge: Network Support and Security">
+                    <h3>Network Support and Security</h3>
+                </a>
+            </div>
+            <div class="badge-item">
+                <a href="https://www.credly.com/badges/2293781f-02f5-4cf2-a8d1-96efa0b8c852/public_url" target="_blank" rel="noopener">
+                    <img src="Images/networking-devices-and-initial-configuration.png" alt="Badge: Networking Devices and Initial Configuration">
+                    <h3>Networking Devices and Initial Configuration</h3>
+                </a>
+            </div>
+            <div class="badge-item">
+                <a href="https://www.credly.com/badges/268653b6-aca7-4a4e-8808-5d0850be0a13/public_url" target="_blank" rel="noopener">
+                    <img src="Images/introduction-to-cybersecurity.png" alt="Badge: Introduction to Cybersecurity">
+                    <h3>Introduction to Cybersecurity</h3>
+                </a>
+            </div>
+            <div class="badge-item">
+                <a href="https://www.credly.com/badges/4b1a516c-2c81-4439-a971-abb581e0a634/public_url" target="_blank" rel="noopener">
+                    <img src="Images/cybersecurity-fundamentals.png" alt="Badge: Cybersecurity Fundamentals">
+                    <h3>Cybersecurity Fundamentals</h3>
+                </a>
+            </div>
+            <div class="badge-item">
+                <a href="https://www.credly.com/badges/f8f6862e-e2b5-43dc-b577-0ff19dd31811/public_url" target="_blank" rel="noopener">
+                    <img src="Images/explore-emerging-tech.png" alt="Badge: Explore Emerging Tech">
+                    <h3>Explore Emerging Tech</h3>
+                </a>
+            </div>
+        </div>
+    </section>
 
-        <!-- Exp/Stu Section -->
-        <section class="experience-section">
-            <div class="experience-container">
-                <!-- Education Card -->
-                <div class="experience-card">
-                    <div class="experience-card-header">
-                        <h2>EDUCACIÓN</h2>
-                    </div>
-                    <div class="experience-card-body">
-                        <div class="timeline-item">
-                            <h3>IBM & Guayerd</h3>
-                            <p class="date">Ago - Nov (2024)</p>
-                        </div>
-                            <p class="description">
-                                <strong>Fundamentos de Data Analytics</strong>
-                                <br/>
-                        <div class="timeline-item">
-                            <h3>Universidad Piloto de Colombia</h3>
-                            <p class="date">Ago (2017) -  Jul (2023)</p>                                 
-                        </div>
-                            <p class="description">
-                                <strong>Ingenieria de Telecomunicaciones</strong>
-                                <br/>
+    <!-- Button Secret Section -->
+    <section>
+        <div class="button-secret">
+            <button onclick="toggleSection()">
+                01000101 01000001 01010011 01010100 01000101 01010010 00100000 01000101 01000111 01000111
+            </button>
+        </div>
 
-                                <br/>
-                            </p>
-                    </div>
+        <!-- Sección oculta con las tarjetas -->
+        <div id="hidden-section" class="hidden-section">
+            <h2 data-i18n="secret.title">Easter egg</h2>
+            <div class="card-hidden-container">
+                <div class="card-hidden">
+                    <h3 data-i18n="secret.movie">Película favorita</h3>
+                    <img src="Images/Blade-Runner-1982.jpg" alt="Blade Runner (1982)">
+                    <p>BLADE RUNNER (1982)</p>
                 </div>
-                <!-- Work Experience Card -->
-                <div class="experience-card">
-                    <div class="experience-card-header">
-                        <h2>EXPERIENCIA</h2>
-                    </div>
-                    <div class="experience-card-body" >
-                        <div class="timeline-item">
-                            <h3>Claro Colombia</h3>
-                            <p class="date">Feb - Jul (2023)</p>
-                        </div>
-                            <p class="description">
-                                <strong>Practicante Universitario</strong>
-                                <br/>
-
-                                <br/>
-                            </p>
-                    </div>                  
+                <div class="card-hidden">
+                    <h3 data-i18n="secret.game">Videojuego favorito</h3>
+                    <img src="Images/Cyberpunk.jpg" alt="Cyberpunk 2077">
+                    <p>CYBERPUNK 2077</p>
+                </div>
+                <div class="card-hidden">
+                    <h3 data-i18n="secret.book">Libro favorito</h3>
+                    <img src="Images/Satanas.png" alt="Satanás, de Mario Mendoza">
+                    <p>SATANÁS - MARIO MENDOZA</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section class="skills-section">
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="icon-container">
-                        <img src="Images\piton.png" alt="Python Logo">
-                    </div>
-                    <h3>Python</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="icon-container">
-                        <img src="Images\sql-database-generic-svgrepo-com.png" alt="SQL">
-                    </div>
-                    <h3>SQL</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="icon-container">
-                        <img src="Images\power-bi-icon-seeklogo.png" alt="User Experience Design Icon">
-                    </div>
-                    <h3>PowerBi</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="icon-container">
-                        <img src="Images\looker-icon.png" alt="Prototype Icon">
-                    </div>
-                    <h3>Looker Studio</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="icon-container">
-                        <img src="Images\excel-svgrepo-com.png" alt="Excel">
-                    </div>
-                    <h3>Excel</h3>
-                </div>
-                <div class="skill-item">
-                    <div class="icon-container">
-                        <img src="Images\social.png" alt="Git Logo">
-                    </div>
-                    <h3>Git - GitHub</h3>
+    <!-- Footer -->
+    <footer>
+        <!-- From Uiverse.io by vaibhavchandranv -->
+        <div id="Contacto" class="card-footer">
+            <div class="head">
+                C:\Windows\system32\CONTACTO.exe
+                <div class="window-controls">
+                    <div class="control-button">—</div>
+                    <div class="control-button">◻</div>
+                    <div class="control-button">✕</div>
                 </div>
             </div>
-        </section>
-
-        <!-- Portafolio Section -->
-        <section id="Proyectos" class="projects-section">
-            <h2>PROYECTOS</h2>
-            <div class="project-container">
-                <div class="project-card-wrapper">
-                    <div class="project-card"> 
-                        <div class="project-details">
-                            <div class="tags">
-                                <span class="tag">Excel - Google Sheet</span>
-                                <span class="tag">Looker Studio</span> 
-                                <span class="tag">Analisís de Datos</span>
-                            </div>
-                            <h3>Proyecto Data Analytics - IBM & Guayerd</h3>
-                            <p>
-                                Dashboard realizado en el Programa: Fundamentos de Data Analytics. <br/> 
-                                El proyecto desarrollado es un Dashboard de gestión financiera diseñado específicamente 
-                                para organizacion no gubernamentales (ONGs). Su principal objetivo es optimizar y simplificar 
-                                la administración de los recursos económicos, facilitando tanto el registro como el seguimiento 
-                                de los ingresos y gastos.                     
-                            </p>
-                            <a href="https://lookerstudio.google.com/reporting/57b70853-91dd-4f23-8f49-6686c0040061" target="_blank" class="view-details-btn">Ver Detalles</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card-wrapper">
-                    <div class="project-card">
-                        <div class="project-details">
-                            <div class="tags">
-                                <span class="tag">Power BI</span>
-                                <span class="tag">Dashboard</span>
-                                <span class="tag">Analisís de Datos</span>
-                            </div>
-                            <h3>Proyectos Power BI</h3>
-                            <p>
-                                Portafolio de Power BI que compila una serie de dashboards interactivos sobre diversos temas. 
-                                Cada visualización está optimizada para la claridad y la funcionalidad, agilizando el análisis y la interpretación de los datos. 
-                                Este proyecto se enfoca en el diseño e implementación de soluciones de reporting dinámicas y personalizadas utilizando Power BI.
-                            </p>
-                            <a href="https://app.powerbi.com/view?r=eyJrIjoiNmY3NWIwYTEtZTQwMC00NDIyLWI3Y2QtYjYxZmVlNmM0NWRlIiwidCI6Ijc5ODcxZWIxLTYwOTYtNDJiZi05OGVmLWI0ZjNlNGVmODMxOCIsImMiOjR9"  target="_blank" class="view-details-btn">Ver Detalles</a>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="project-card-wrapper">
-                    <div class="project-card">
-                        <div class="project-details">
-                            <div class="tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Jupyter Notebook</span>
-                                <span class="tag">Analisís de Datos</span>
-                            </div>
-                            <h3>Análisis Exploratorio de Datos - Gym Members Exercise</h3>
-                            <p>
-                                Análisis Exploratorio de Datos aplicado a un dataset de miembros de gimnasio extraído de Kaggle. 
-                                Para identificar patrones y relaciones. La intención es evidenciar, a través de técnicas de análisis 
-                                y visualización de datos en Python, la capacidad para extraer insights valiosos y 
-                                aplicar el conocimiento teórico en un caso práctico relevante.
-                            </p>
-                            <a href="https://github.com/NicolasRamosB14/Analisis_Exploratorio_de_Datos_Python/tree/main" target="_blank" class="view-details-btn">Ver Detalles</a>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="content">
+                <span class="degradado">H:\</span><span data-i18n="footer.linkedin">linkedin</span><span class="degradado"> &gt; </span>
+                <a href="https://www.linkedin.com/in/nicol%C3%A1sramos" target="_blank" rel="noopener">linkedin.com/in/nicolásramos</a>
+                <br>
+                <span class="degradado">F:\</span><span data-i18n="footer.github">GitHub</span><span class="degradado"> &gt; </span>
+                <a href="https://github.com/NicolasRamosB14" target="_blank" rel="noopener">github.com/NicolasRamosB14</a>
+                <br>
+                <span class="degradado">C:\</span><span data-i18n="footer.email">Correo</span><span class="degradado"> &gt; </span>
+                <a href="mailto:nicolasramosb14@gmail.com">nicolasramosb14@gmail.com</a>
+                <br>
+                <span class="degradado">E:\</span><span data-i18n="footer.phone">Teléfono</span><span class="degradado"> &gt; </span>
+                <a href="tel:+573142540541">+57 314 254 0541</a>
+                <br>
+                <span class="degradado">D:\</span><span data-i18n="footer.city">Ciudad</span><span class="degradado"> &gt; </span>
+                <span data-i18n="footer.cityValue">Bogotá, Colombia</span>
+                <br>
             </div>
-            <!--
-                <div class="project-view-all-btn">
-                    <a href="#" class="view-all-btn">View All Projects</a>
-                </div>
-            -->
-        </section>
+        </div>
+    </footer>
 
-        <!-- Badge Section -->
-        <section class="badge">
-            <div class="badge-container">
-                <div class="badge-item">
-                    <a href="https://www.credly.com/badges/268653b6-aca7-4a4e-8808-5d0850be0a13/public_url" target="_blank">
-                        <img src="Images/introduction-to-cybersecurity.png" alt="Badge 1">
-                        <h3>Introduction to Cybersecurity</h3>
-                    </a>
-                </div>
-                <div class="badge-item">
-                    <a href="https://www.credly.com/badges/9f124540-1b45-40f7-8928-471cc015e318/public_url" target="_blank">
-                        <img src="Images/network-support-and-security.png" alt="Badge 2">
-                        <h3>Network Support and Security</h3>
-                    </a>
-                </div>
-                <div class="badge-item">
-                    <a href="https://www.credly.com/badges/2293781f-02f5-4cf2-a8d1-96efa0b8c852/public_url" target="_blank">
-                        <img src="Images/networking-devices-and-initial-configuration.png" alt="Badge 3">
-                        <h3>Networking Devices and Initial Configuration</h3>
-                    </a>
-                </div>
-                <div class="badge-item">
-                    <a href="https://www.credly.com/badges/f8f6862e-e2b5-43dc-b577-0ff19dd31811/public_url" target="_blank">
-                        <img src="Images/explore-emerging-tech.png" alt="Badge 4">
-                        <h3>Explore Emerging Tech</h3>
-                    </a>
-                </div>
-                <div class="badge-item">
-                    <a href="https://www.credly.com/badges/4b1a516c-2c81-4439-a971-abb581e0a634/public_url" target="_blank">
-                        <img src="Images/cybersecurity-fundamentals.png" alt="Badge 5">
-                        <h3>Cybersecurity Fundamentals</h3>
-                    </a>
-                </div>
-                <div class="badge-item">
-                    <a href="https://www.credly.com/badges/c0772cc4-faa8-44e9-b74e-421a02f7a275/public_url" target="_blank">
-                        <img src="Images/data-fundamentals.png" alt="Badge 6">
-                        <h3>Data Fundamentals</h3>
-                    </a>
-                </div>
-                <div class="badge-item">
-                    <a href="https://www.credly.com/badges/1f83df31-6c23-4f67-8f34-5723710a028f/public_url" target="_blank">
-                        <img src="Images/artificial-intelligence-fundamentals.png" alt="Badge 7">
-                        <h3>Artificial Intelligence Fundamentals</h3>
-                    </a>
-                </div>
-            </div>
-        </section>
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
 
-        <!-- Button Secret Section -->
-        <section>
-            <div class="button-secret">
-                <button onclick="toggleSection()"> 
-                    01000101 01000001 01010011 01010100 01000101 01010010 00100000 01000101 01000111 01000111
-                </button>
-            </div>
-            
-            <!-- Sección oculta con las tarjetas -->
-            <div id="hidden-section" class="hidden-section">
-                <h2> EASTER EGG </h2>
-                <div class="card-hidden-container">
-                    <!-- Primera tarjeta -->
-                    <div class="card-hidden">
-                        <h3>Película Favorita</h3>
-                        <img src="Images\Blade-Runner-1982.jpg" alt="Blade-Runner-1982">
-                        <p>BLADE RUNNER (1982)</p>
-                    </div>
-                            
-                    <!-- Segunda tarjeta -->
-                    <div class="card-hidden">
-                        <h3>Videojuego Favorito</h3>
-                        <img src="Images\Cyberpunk.jpg" alt="Cyberpunk">
-                        <p>CYBERPUNK 2077</p>
-                    </div>
-                            
-                    <!-- Tercera tarjeta -->
-                    <div class="card-hidden">
-                        <h3>Libro Favorito</h3>
-                        <img src="Images\Satanas.png" alt="Imagen 3">
-                        <p>SATANÁS - MARIO MENDOZA</p>
-                    </div>
-                </div>
-            </div>
-            <script src="script.js"></script>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <!-- From Uiverse.io by vaibhavchandranv --> 
-            <div id="Contacto" class="card-footer">
-                <div class="head">
-                    C:\Windows\system32\CONTACTO.exe 
-                    <div class="window-controls">
-                        <div class="control-button">—</div>
-                        <div class="control-button">◻</div>
-                        <div class="control-button">✕</div>
-                    </div>
-                </div>
-                <div class="content">   
-                        <span class="degradado">H:\</span>linkedin <span class="degradado"> > </span> www.linkedin.com/in/nicolásramosbolaños14 
-                    <br/>
-                        <span class="degradado">F:\</span>GitHub <span class="degradado"> > </span> https://github.com/NicolasRamosB14
-                    <br/>
-                        <span class="degradado">C:\</span>Correo <span class="degradado"> > </span> Nicolasramosb14@gmail.com
-                    <br/>
-                        <span class="degradado">E:\</span>Teléfono <span class="degradado"> > </span> 314 254 0541
-                    <br/>
-                        <span class="degradado">D:\</span>Ciudad <span class="degradado"> > </span>Bogotá, Colombia
-                    <br/>
-                </div>
-            </div>
-        </footer>
-        
-    </body>
 </html>
